@@ -1,19 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>MartPlace</title>
+  <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
   <link rel="stylesheet" href="css/libs.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
-  
 
+<body>
+
+  <header class="header">
+    <div class="header__top">
+      <div class="container">
+        <div class="header__top-inner">
+          <div class="header__logo">
+            <a class="header__logo-link" href="#">
+              <img class="header__logo-img" src="images/logo.png" alt="logo">
+            </a>
+          </div>
+          <div class="user-menu">
+            <a class="user-menu__btn btn" href="#">Become a Seller</a>
+            <div class="user-menu__icons">
+              <a class="user-menu__icons-btn btn-alarm" href="#">
+                <span class="lnr lnr-alarm"></span>
+              </a>
+              <a class="user-menu__icons-btn btn-envelope" href="#">
+                <span class="lnr lnr-envelope"></span>
+              </a>
+              <a class="user-menu__icons-btn btn-cart" href="#">
+                <span class="lnr lnr-cart"></span>
+              </a>
+            </div>
+            <div class="user-menu__info user-info">
+              <a class="user-info__avatar" href="#">
+                <img class="user-info__avatar-img" src="images/content/user.jpg" alt="user">
+              </a>
+              <div class="user-info__content">
+                <a class="user-info__name" href="#">Taofiq Hakim</a>
+                <a class="user-info__balance" href="#">$20.45</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <div class="container">
+        <div class="header__bottom-inner">
+          <div class="header__menu">
+            <nav class="menu">
+              <ul class="menu__list">
+                <li class="menu__list-item">
+                  <a class="menu__list-link" href="#">
+                    Home
+                  </a>
+                </li>
+                <li class="menu__list-item">
+                  <a class="menu__list-link" href="#">
+                    All products
+                  </a>
+                </li>
+                <li class="menu__list-item">
+                  <a class="menu__list-link" href="#">
+                    Wordpress
+                  </a>
+                </li>
+                <li class="menu__list-item">
+                  <a class="menu__list-link" href="#">
+                    Festures
+                  </a>
+                </li>
+                <li class="menu__list-item">
+                  <a class="menu__list-link" href="#">
+                    Pages
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header__search">
+            <form class="header__search-form">
+              <input class="header__search-input" type="text" placeholder="Search product here..." required>
+              <button class="header__search-btn btn" type="submit">
+                <span class="lnr lnr-magnifier"></span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/libs.min.js"></script>
-  <script src="js/main.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
+
 </html>
