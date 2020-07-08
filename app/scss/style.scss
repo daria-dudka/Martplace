@@ -31,6 +31,10 @@
     line-height: 28px;
     margin-right: 53px;
   }
+  &__btn:hover,
+  &__icons-btn:hover{
+    opacity: 0.8;
+  }
   &__icons{
     display: flex;
     margin-right: 10px;
@@ -40,7 +44,6 @@
     position: relative;
   }
   &__icons-btn::after{
-    content: "";
     height: 22px;
     min-width: 22px;
     position: absolute;
@@ -48,17 +51,25 @@
     top: -50%;
     right: -50%;
     color: #ffffff;
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: 500;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
   }
   &__icons-btn.btn-alarm::after{
+    content: "25";
     background-color: #ff6a6c;
   }
   &__icons-btn.btn-envelope::after{
+    content: "6";
     background-color: #62d03b;
   }
   &__icons-btn.btn-cart::after{
+    content: "2";
     background-color: $blue;
   }
-  
 }
 .lnr{
   color: $icon-color;
@@ -142,6 +153,131 @@
   border-radius: 20px;
   border: none;
   cursor: pointer;
+  &:hover{
+    opacity: 0.8;
+  }
+}
+
+// ended header
+// start search
+
+.search{
+  position: relative;
+  background-color: #294cce;
+  min-height: 727px;
+}
+.search__inner{
+  padding-top: 168px;
+  color: #ffffff;
+  text-align: center;
+  &-title{
+    font-size: 60px;
+    line-height: 70px;
+  }
+  &-title-bold{
+    display: inline-block;
+    font-weight: 700;
+    line-height: 70px;
+  }
+  &-text{
+    font-weight: 500;
+    font-size: 20px;
+    margin: 35px 0px 68px;
+  }
+}
+.search__inner-btn{
+  padding: 20px 30px;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 50px;
+  margin-bottom: 165px;
+  &:hover{
+    background-color: #fff;
+    color: $blue;
+  }
+  & + & {
+    margin-left: 30px;
+  }
+}
+.search__wrapper{
+  margin-left: 40px;
+  height: 53px;
+  width: 805px;
+  position: relative;
+}
+.search__box{
+  position: absolute;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+  z-index: 1;
+  &::before,
+  &::after{
+    content: "";
+    position: absolute;
+    height: 135px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+    opacity: 0.5;
+    z-index: -1;
+  }
+  &::before{
+    width: 1110px;
+    top: -15px;
+    left: 12px;
+  }
+  &::after{
+    width: 1080px;
+    top: -30px;
+    left: 30px;
+  }
+}
+.search__form{
+  display: flex;
+  align-items: center;
+  width: 1140px;
+  height: 135px;
+}
+.search__input, 
+.search__form-btn{ 
+  outline-color: #dcdcdc;
+  height: 53px;
+  border-radius: 6px;
+}
+.search__input{
+  border: 1px solid #dcdcdc;
+  width: 805px;
+  padding: 0 230px 0 30px;
+}
+.search__select{
+  padding-left: 20px;
+  width: 194px;
+  border-radius: 0px 6px 6px 0px;
+  outline-color: #dcdcdc;
+  height: 53px;
+  border: 1px solid #dcdcdc;
+  position: absolute;
+  display: block;
+  top: 0px;
+  right: 0px;
+  background-image: url(../images/icons/chevron-down.png);
+  background-repeat: no-repeat;
+  background-position: right 20px top 50%, 0 0;
+  appearance: none;
+  cursor: pointer;
+}
+.search__form-btn{
+  color: #fff;
+  outline: none;
+  border: none;
+  background-color: $blue;
+  margin-left: 30px;
+  width: 223px;
+  cursor: pointer;
+  &:hover{
+    opacity: 0.8;
+  }
 }
 
 
