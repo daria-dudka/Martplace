@@ -48,8 +48,8 @@
     min-width: 22px;
     position: absolute;
     border-radius: 50%;
-    top: -50%;
-    right: -50%;
+    top: -70%;
+    right: -70%;
     color: #ffffff;
     font-size: 14px;
     line-height: 23px;
@@ -278,8 +278,54 @@
   }
 }
 
+// end search
+// start advantages
 
+.advantages{
+  background-color: #ffffff;
+  padding: 185px 0 120px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.advantages__item{
+  max-width: 360px;
+  width: 100%;
+  text-align: center;
+  padding: 40px 15px;
+  &:hover{
+    box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+  }
+  &-image{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 112px;
+    width: 112px;
+    margin: 0 auto 35px;
+  }
+  .image-research{
+    background-image: url(../images/advantages-1.png);
+  }
+  .image-responsive{
+    background-image: url(../images/advantages-2.png);
+    height: 124px;
+    width: 116px;
+    margin-bottom: 25px;
+  }
+  .image-sell{
+    background-image: url(../images/advantages-3.png);
+  }
+  &-title{
+    font-size: 24px;
+    color: #000000;
+  }
+  &-text{
+    line-height: 30px;
+  }
+}
 
-
-
+//end advantages
 
