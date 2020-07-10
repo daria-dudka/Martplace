@@ -333,7 +333,7 @@
 
 .slider{
   background-color: #eff1f5;
-  padding: 120px 0;
+  padding: 120px 0 95px 0;
   &__title{
     position: relative;
     &::after{
@@ -505,7 +505,7 @@
   background-color: #f6f7fb;
   padding: 120px 0;
   &__inner-title{
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   &__inner-btn{
     background-color: #ffffff;
@@ -580,7 +580,7 @@
     }
   }
 }
-.item__bottom-content{
+.newest__bottom-content{
   display: flex;
   justify-content: space-between;
   align-items: center;
