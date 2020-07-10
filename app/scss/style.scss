@@ -340,7 +340,7 @@
       content: '';
       position: absolute;
       background-color: $purple;
-      border-radius: 20px;
+      border-radius: 30px;
       width: 110px;
       height: 45px;
       top: 34px;
@@ -428,11 +428,13 @@
   padding: 3px 14px 0;
   border-radius: 20px;
   cursor: pointer;
+  outline: transparent;
   & + &{
     margin-left: 5px;
   }
   &:hover{
-    opacity: 0.8;
+    background-color: $blue;
+    color: #ffffff;
   }
 }
 .item__bottom{
@@ -491,10 +493,98 @@
   right: 105px;
   top: -60px;
 }
-
 .slick-next {
   right: 55px;
   top: -60px;
 }
 
 //end slider
+//start newest
+
+.newest{
+  background-color: #f6f7fb;
+  padding: 120px 0;
+  &__inner-title{
+    margin-bottom: 30px;
+  }
+  &__inner-btn{
+    background-color: #ffffff;
+    box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+    padding: 30px 0 30px 30px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+  }
+  &__inner-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__item{
+    box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+    border-radius: 4px;
+    max-width: 362px;
+    width: 100%;
+    margin-top: 30px;
+  }
+  &__item-img{
+    min-height: 232px;
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &__item-content{
+    background-color: #ffffff;
+    padding: 27px 38px 0 27px;
+    
+  }
+  &__item-title{
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+  }
+  &__item-text{
+    padding: 30px 0;
+    line-height: 30px;
+  }
+  &__item-bottom{
+    border-top: 1px solid #ececec;
+  }
+  &__item-price{
+    background-color: #e6f1fd;
+    color: $blue;
+    font-weight: 500;
+    min-width: 59px;
+    text-align: center;
+    margin-right: 14px;
+    padding: 0 10px;
+  }
+  &__likes{
+    margin-right: 0;
+  }
+  &__rate{
+    margin-right: 30px;
+  }
+  &__button-all{
+    display: block;
+    margin: 58px auto 0;
+    background-color: $blue;
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    padding: 19px 30px;
+    border-radius: 30px;
+    outline: transparent;
+    &:hover{
+      opacity: 0.8;
+    }
+  }
+}
+.item__bottom-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+
+//end newest

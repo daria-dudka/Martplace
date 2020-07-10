@@ -11,6 +11,6 @@ $(function(){
     nextArrow: '<button class="slick-arrow slick-next"><img src="images/icons/chevron-right.png" alt=""></button>'
   });
 
-  
+  var mixer = mixitup('.newest__inner-box');
   
 });
