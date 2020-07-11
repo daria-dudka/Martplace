@@ -278,10 +278,21 @@
       <div class="container">
         <div class="newest__inner">
           <div class="newest__inner-title title">
-            Newest Release Products
+            <span>Newest Release Products</span>
+            <ul class="newest__inner-filter inner-filter">
+              <li class="inner-filter__item">Filter by:
+                <ul class="inner-filter__list">
+                  <li class="inner-filter__list-item">Trending items</li>
+                  <li class="inner-filter__list-item">Best seller</li>
+                  <li class="inner-filter__list-item">Best rating</li>
+                  <li class="inner-filter__list-item">Low price</li>
+                  <li class="inner-filter__list-item">High price</li>
+                </ul>
+              </li>
+            </ul>
           </div>
           <div class="newest__inner-btn">
-            <button class="item-category__btn" type="button" data-filter=".plugins">Plugins</button>
+            <button class="item-category__btn item-category__btn--active" type="button" data-filter=".plugins">Plugins</button>
             <button class="item-category__btn" type="button" data-filter=".wordpress">WordPress</button>
             <button class="item-category__btn" type="button" data-filter=".site-template">Site Template</button>
             <button class="item-category__btn" type="button" data-filter=".psd">PSD Template</button>
