@@ -458,13 +458,12 @@
     margin-right: 18px;
     position: relative;
     &::before{
-      content:'';
+      content:'\e813';
       position: absolute;
       left: 0;
-      background-image: url(../images/icons/heart.png);
-      background-repeat: no-repeat;
-      height: 20px;
-      width: 18px;
+      font-family: 'Linearicons-Free';
+      font-size: 17px;
+      color: $purple;
     }
   }
   &-purchase{
@@ -473,13 +472,12 @@
     color: $blue;
     position: relative;
     &::before{
-      content:'';
+      content:'\e82e';
       position: absolute;
       left: 0;
-      background-image: url(../images/icons/cart.png);
-      background-repeat: no-repeat;
-      height: 20px;
-      width: 18px;
+      font-family: 'Linearicons-Free';
+      font-size: 17px;
+      color: $blue;
     }
   }
 }
