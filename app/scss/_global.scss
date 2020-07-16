@@ -7,15 +7,7 @@ html{
   box-sizing: inherit;
 }
 a{
-  display: inline-block;
   text-decoration: none;
-  color: $text;
-}
-ul,
-li{
-  margin: 0;
-  padding: 0;
-  list-style: none;
 }
 body{
   font-family: 'Quicksand', sans-serif;
@@ -31,6 +23,9 @@ body{
 .btn{
   background-color: $blue;
   color: #ffffff;
+  &:hover{
+    background-color: rgba(#0674ec, 0.9)
+  }
 }
 .title{
   font-size: 30px;

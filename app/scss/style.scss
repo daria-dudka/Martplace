@@ -4,9 +4,11 @@
 
 // start header
 
-.header__top{
+.header{
+  &__top{
   background-color: #eef1f3;
-  &-inner{
+  }
+  &__top-inner{
     display: flex;
     justify-content: space-between;
     height: 100px;
@@ -15,25 +17,23 @@
 }
 .header__logo{
   padding-left: 8px;
+  display: block;
 }
 .user-menu{
   display: flex;
   justify-content: space-between;
   align-items: center;
   &__btn{
+    display: inline-block;
     margin: 8px 0;
-    padding: 6px;
-    width: 140px;
+    padding: 5px;
+    width: 139px;
     border-radius: 20px;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
     text-align: center;
     font-size: 14px;
-    line-height: 28px;
+    line-height: 25px;
     margin-right: 53px;
-  }
-  &__btn:hover,
-  &__icons-btn:hover{
-    opacity: 0.8;
   }
   &__icons{
     display: flex;
@@ -43,11 +43,11 @@
     margin-right: 34px;
     position: relative;
   }
-  &__icons-btn::after{
+  &__numbers{
     height: 22px;
     min-width: 22px;
     position: absolute;
-    border-radius: 50%;
+    border-radius: 30px;
     top: -70%;
     right: -70%;
     color: #ffffff;
@@ -58,16 +58,13 @@
     padding-left: 5px;
     padding-right: 5px;
   }
-  &__icons-btn.btn-alarm::after{
-    content: "25";
+  &__numbers-alarm{
     background-color: #ff6a6c;
   }
-  &__icons-btn.btn-envelope::after{
-    content: "6";
+  &__numbers-envelope{
     background-color: #62d03b;
   }
-  &__icons-btn.btn-cart::after{
-    content: "2";
+  &__numbers-cart{
     background-color: $blue;
   }
 }
@@ -75,7 +72,7 @@
   color: $icon-color;
   font-size: 20px;
   &-magnifier{
-    font-size: 18px;
+    font-size: 16px;
     color: #ffffff;
   }
 }
@@ -105,25 +102,28 @@
 }
 .header__bottom{
   background-color: #ffffff;
-  &-inner{
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+}
+.header__bottom-inner{
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .menu__list{
   display: flex;
-  &-item + &-item{
-    margin-left: 34px;
-  }
-  &-link{
-    color: $dark;
-    font-size: 15px;
-    font-weight: 500;
-    text-transform: uppercase;
-  }
-  &-link:hover{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.menu__list-item + .menu__list-item{
+  margin-left: 34px;
+}
+.menu__list-link{
+  color: $dark;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  &:hover{
     color: $blue;
   }
 }
@@ -150,11 +150,11 @@
   right: 0;
   height: 100%;
   width: 70px;
-  border-radius: 20px;
+  border-radius: 30px;
   border: none;
   cursor: pointer;
   &:hover{
-    opacity: 0.8;
+    background-color: rgba(#0674ec, 0.9)
   }
 }
 
@@ -170,20 +170,20 @@
   padding-top: 168px;
   color: #ffffff;
   text-align: center;
-  &-title{
-    font-size: 60px;
-    line-height: 70px;
-  }
-  &-title-bold{
-    display: inline-block;
-    font-weight: 700;
-    line-height: 70px;
-  }
-  &-text{
-    font-weight: 500;
-    font-size: 20px;
-    margin: 35px 0px 68px;
-  }
+}
+.search__inner-title{
+  font-size: 60px;
+  line-height: 70px;
+}
+.search__inner-title--bold{
+  display: inline-block;
+  font-weight: 700;
+  line-height: 70px;
+}
+.search__inner-text{
+  font-weight: 500;
+  font-size: 20px;
+  margin: 35px 0px 68px;
 }
 .search__inner-btn{
   padding: 20px 30px;
@@ -191,6 +191,7 @@
   color: #fff;
   border-radius: 50px;
   margin-bottom: 165px;
+  display: inline-block;
   &:hover{
     background-color: #fff;
     color: $blue;
@@ -221,12 +222,14 @@
     z-index: -1;
   }
   &::before{
-    width: 1110px;
+    max-width: 1110px;
+    width: 100%;
     top: -15px;
     left: 12px;
   }
   &::after{
-    width: 1080px;
+    max-width: 1080px;
+    width: 100%;
     top: -30px;
     left: 30px;
   }
@@ -234,7 +237,8 @@
 .search__wrapper{
   margin-left: 40px;
   height: 53px;
-  width: 805px;
+  max-width: 805px;
+  width: 100%;
   position: relative;
 }
 .search__input, 
@@ -248,12 +252,13 @@
   outline-color: $border;
 }
 .search__input{
-  width: 805px;
+  width: 100%;
   padding: 0 230px 0 30px;
 }
 .search__select{
   padding-left: 20px;
-  width: 194px;
+  max-width: 194px;
+  width: 100%;
   border-radius: 0px 6px 6px 0px;
   height: 53px;
   position: absolute;
@@ -272,10 +277,11 @@
   border: none;
   background-color: $blue;
   margin-left: 30px;
-  width: 223px;
+  max-width: 223px;
+  width: 100%;
   cursor: pointer;
   &:hover{
-    opacity: 0.8;
+    background-color: rgba(#0674ec, 0.9)
   }
 }
 
@@ -300,33 +306,33 @@
     border-radius: 4px;
     cursor: pointer;
   }
-  &-image{
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 112px;
-    width: 112px;
-    margin: 0 auto 35px;
-  }
-  .image-research{
-    background-image: url(../images/advantages-1.png);
-  }
-  .image-responsive{
-    background-image: url(../images/advantages-2.png);
-    height: 124px;
-    width: 116px;
-    margin-bottom: 25px;
-  }
-  .image-sell{
-    background-image: url(../images/advantages-3.png);
-  }
-  &-title{
-    font-size: 24px;
-    color: #000000;
-  }
-  &-text{
-    line-height: 30px;
-  }
+}
+.advantages__item-image{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 112px;
+  width: 112px;
+  margin: 0 auto 35px;
+}
+.image-research{
+  background-image: url(../images/advantages-1.png);
+}
+.image-responsive{
+  background-image: url(../images/advantages-2.png);
+  height: 124px;
+  width: 116px;
+  margin-bottom: 25px;
+}
+.image-sell{
+  background-image: url(../images/advantages-3.png);
+}
+.advantages__item-title{
+  font-size: 24px;
+  color: #000000;
+}
+.advantages__item-text{
+  line-height: 30px;
 }
 
 //end advantages
@@ -356,9 +362,20 @@
     border-radius: 4px;
     box-shadow: 0px 2px 30px 0px rgba(147, 155, 168, 0.1);
     position: relative;
+    overflow: hidden;
     &:hover .slider__item-hover{
       display: flex;
     }
+  }
+  &__item-img{
+    display: block;
+    max-width: 555px;
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
   }
   &__item-hover{
     background: linear-gradient(250deg, rgba(6,116,236,1) 0%, rgba(61,94,215,1) 46%, rgba(115,71,193,1) 100%);
@@ -372,15 +389,6 @@
     display: none;
     align-items: center;
     justify-content: center;
-  }
-  &__item-img{
-    display: block;
-    max-width: 555px;
-    width: 100%;
-    height: 450px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
   }
   &__item-content{
     max-width: 585px;
@@ -398,6 +406,7 @@
   &__item-text{
     line-height: 30px;
     padding: 22px 0 40px 0;
+    margin: 0;
   }
   &__item-bottom{
     padding-top: 22px;
@@ -407,7 +416,7 @@
   }
 }
 .item-btn{
-  padding-top: 10px;
+  padding: 15px 27px 0;
   display: flex;
   align-items: center;
   &__link{
@@ -443,59 +452,62 @@
   font-size: 15px;
   color: #868c96;
   line-height: 30px;
-  padding: 3px 14px 0;
+  padding: 3px 20px 0;
   border-radius: 20px;
   cursor: pointer;
   outline: transparent;
   & + &{
-    margin-left: 5px;
+    margin-left: 3px;
   }
-  &:hover,
-  &--active{
+  &:hover{
     background-color: $blue;
     color: #ffffff;
     transition: all 0.3s;
   }
 }
-.item__bottom{
-  &-price{
-    background-color: $blue;
-    color: #ffffff;
-    line-height: 30px;
-    font-size: 15px;
-    font-weight: 500;
-    padding: 0 24px 0 19px;
-    border-radius: 20px;
-    margin-right: 22px;
+.item-category__btn--active{
+  background-color: $blue;
+  color: #ffffff;
+}
+.item-bottom__price{
+  display: inline-block;
+  background-color: $blue;
+  color: #ffffff;
+  line-height: 30px;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 0 24px 0 19px;
+  border-radius: 20px;
+  margin-right: 22px;
+}
+.item-bottom__likes{
+  display: inline-block;
+  font-size: 15px;
+  color: #000000;
+  padding-left: 28px;
+  margin-right: 18px;
+  position: relative;
+  &::before{
+    content:'\e813';
+    position: absolute;
+    left: 0;
+    font-family: 'Linearicons-Free';
+    font-size: 17px;
+    color: $purple;
   }
-  &-likes{
-    font-size: 15px;
-    color: #000000;
-    padding-left: 28px;
-    margin-right: 18px;
-    position: relative;
-    &::before{
-      content:'\e813';
-      position: absolute;
-      left: 0;
-      font-family: 'Linearicons-Free';
-      font-size: 17px;
-      color: $purple;
-    }
-  }
-  &-purchase{
-    padding-left: 24px;
-    font-size: 15px;
+}
+.item-bottom__purchase{
+  padding-left: 24px;
+  font-size: 15px;
+  color: $blue;
+  position: relative;
+  &::before{
+    content:'\e82e';
+    position: absolute;
+    left: 0;
+    font-family: 'Linearicons-Free';
+    font-size: 17px;
     color: $blue;
-    position: relative;
-    &::before{
-      content:'\e82e';
-      position: absolute;
-      left: 0;
-      font-family: 'Linearicons-Free';
-      font-size: 17px;
-      color: $blue;
-    }
   }
 }
 .slick-arrow {
@@ -548,6 +560,7 @@
     width: 100%;
     margin-top: 30px;
     position: relative;
+    overflow: hidden;
   }
   &__item-img{
     min-height: 232px;
@@ -558,15 +571,16 @@
   }
   &__item-content{
     background-color: #ffffff;
-    padding: 27px 38px 0 27px;
+    padding: 24px 0 20px;
   }
   &__item-title{
     font-size: 20px;
     font-weight: 500;
     color: #000000;
+    padding: 0 27px;
   }
   &__item-text{
-    padding: 30px 0;
+    padding: 10px 27px;
     line-height: 30px;
   }
   &__item-bottom{
@@ -597,13 +611,15 @@
     padding: 19px 30px;
     border-radius: 30px;
     outline: transparent;
+    cursor: pointer;
     &:hover{
-      opacity: 0.8;
-      cursor: pointer;
+      background-color: rgba(#0674ec, 0.9)
     }
   }
 }
 .inner-filter{
+  margin: 0;
+  list-style: none;
   &__item{
     color: #747b86;
     font-size: 16px;
@@ -611,7 +627,7 @@
     padding-right: 57px;
     position: relative;
     cursor: pointer;
-    &:after{
+    &::after{
       content:'';
       position: absolute;
       top: 8px;
@@ -641,10 +657,23 @@
     box-shadow: 0px 5px 40px 0px rgba(82, 85, 90, 0.2);
     border-radius: 3px;
     cursor: pointer;
+    list-style: none;
   }
   &__list-item:hover{
     color: $blue;
   }
+}
+.inner-filter__list-item::before{
+  content:'';
+  position: absolute;
+  top: -11px;
+  right: 11px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 8.5px 17px 8.5px;
+  border-color: transparent transparent #ffffff transparent;
 }
 .newest__item:hover .item-hover{
   display: flex;
@@ -682,7 +711,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 0;
+  padding: 16px 27px 0;
 }
 
 //end newest
