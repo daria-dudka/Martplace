@@ -724,6 +724,9 @@
   .newest__item + .newest__item{
     margin-left: 15px;
   }
+  .slick-track{
+    margin-top: 15px;
+  }
 }
 .slick-initialized .slick-slide{
   margin-left: 6px;
@@ -731,6 +734,61 @@
 .followers-slider__title::after{
   background-color: $blue;
 }
+//end followers-slider
+//start statistics
 
-
+.statistics{
+  background-color: #212225;
+  padding: 90px 0;
+}
+.statistics__inner{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.statistics__item-number{
+  font-size: 36px;
+  padding-top: 90px;
+  position: relative;
+  &::before{
+    font-family: 'Linearicons-Free';
+    font-size: 45px;
+    position: absolute;
+    top: 0;
+  }
+}
+.statistics__item-number--items{
+  color: #feb71d;
+  &::before{
+    content: "\e84c";
+    left: 30px;
+  }
+}
+.statistics__item-number--sales{
+  color: #58c9e9;
+  &::before{
+    content: "\e80b";
+    left: 17px;
+  }
+}
+.statistics__item-number--customers{
+  color: #77de51;
+  &::before{
+    content: "\e854";
+    left: 45px;
+  }
+}
+.statistics__item-number--members{
+  color: #ff6a6d;
+  &::before{
+    content: "\e82b";
+    left: 25px;
+  }
+}
+.statistics__item-title{
+  font-size: 18px;
+  color: #ffffff;
+  line-height: 36px;
+}
+//end statistics
 
