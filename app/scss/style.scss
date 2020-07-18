@@ -793,7 +793,7 @@
 //end statistics
 //start benefits
 .benefits__inner{
-  padding: 100px 0;
+  padding: 100px 0 115px 0;
   text-align: center;
 }
 .benefits__title{
@@ -871,3 +871,82 @@
 }
 
 //end benefits
+//start options
+.options-inner{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.options__item-content{
+  max-width: 560px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.options__item{
+  padding: 95px 0;
+  color: #ffffff;
+  width: 50%;
+  
+}
+.options__item-sell{
+  background-color: $blue;
+  background-image: url(../images/blue-waves.png);
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+}
+.options__item-buy{
+  background-color: $purple;
+  background-image: url(../images/purple-waves.png);
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+}
+.options__item-title{
+  font-size: 36px;
+  padding-top: 146px;
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 225px;
+    width: 130px;
+    height: 110px;
+  }
+}
+.options__item-text{
+  line-height: 30px;
+  margin-bottom: 60px;
+}
+.options__item-btn{
+  background-color: #ffffff;
+  min-width: 195px;
+  padding: 16px 25px;
+  border-radius: 40px;
+  transition: all 0.3s;
+}
+.options__item-sell{
+  .options__item-btn{
+    color: $blue;
+    &:hover{
+      background-color: $purple;
+      color: #ffffff;
+    }
+  }
+  .options__item-title::before{
+    background-image: url(../images/icons/sell.svg);
+  }
+}
+.options__item-buy{
+  .options__item-btn{
+    color: $purple;
+    padding: 16px 37px;
+    &:hover{
+      background-color: $blue;
+      color: #ffffff;
+    }
+  }
+  .options__item-title::before{
+    background-image: url(../images/icons/buy.svg);
+  }
+}
