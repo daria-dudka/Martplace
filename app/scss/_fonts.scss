@@ -23,6 +23,14 @@
 }
 
 @font-face {
+  font-family: 'Quicksand';
+  src: url('../fonts/Quicksand-Light.woff2') format('woff2'),
+       url('../fonts/Quicksand-Light.woff') format('woff');
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
 	font-family: 'Linearicons-Free';
 	src:url('../fonts/Linearicons-Free.eot?w118d');
 	src:url('../fonts/Linearicons-Free.eot?#iefixw118d') format('embedded-opentype'),
@@ -36,7 +44,6 @@
 
 .lnr {
 	font-family: 'Linearicons-Free';
-	speak: none;
 	font-style: normal;
 	font-weight: normal;
 	font-variant: normal;
@@ -82,4 +89,22 @@
 }
 .lnr-users:before {
 	content: "\e82b";
+}
+.lnr-license:before {
+	content: "\e822";
+}
+.lnr-magic-wand:before {
+	content: "\e803";
+}
+.lnr-lock:before {
+	content: "\e80f";
+}
+.lnr-chart-bars:before {
+	content: "\e843";
+}
+.lnr-leaf:before {
+	content: "\e849";
+}
+.lnr-phone:before {
+	content: "\e831";
 }

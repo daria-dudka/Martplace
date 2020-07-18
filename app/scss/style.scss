@@ -370,8 +370,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 450px;
-    max-width: 556px;
+    height: 452px;
+    max-width: 548px;
     width: 100%;
     display: none;
     align-items: center;
@@ -758,28 +758,28 @@
   }
 }
 .statistics__item-number--items{
-  color: #feb71d;
+  color: $orange;
   &::before{
     content: "\e84c";
     left: 30px;
   }
 }
 .statistics__item-number--sales{
-  color: #58c9e9;
+  color: $light-blue;
   &::before{
     content: "\e80b";
     left: 17px;
   }
 }
 .statistics__item-number--customers{
-  color: #77de51;
+  color: $green;
   &::before{
     content: "\e854";
     left: 45px;
   }
 }
 .statistics__item-number--members{
-  color: #ff6a6d;
+  color: $red;
   &::before{
     content: "\e82b";
     left: 25px;
@@ -791,4 +791,83 @@
   line-height: 36px;
 }
 //end statistics
+//start benefits
+.benefits__inner{
+  padding: 100px 0;
+  text-align: center;
+}
+.benefits__title{
+  color: #000000;
+  font-size: 36px;
+  margin-top: 10px;
+}
+.benefits__title-span{
+  color: $blue;
+}
+.benefits__text{
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 30px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+.benefits__items-box{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.benefits__item{
+  max-width: 360px;
+  min-height: 375px;
+  padding: 25px 30px 0;
+  box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+  margin-top: 30px;
+  position: relative;
+  border-radius: 4px;
+}
+.benefits__item-number{
+  font-size: 48px;
+  color: rgba(#5c87f8, 0.2);
+  font-weight: 300;
+  position: absolute;
+  top: 12px;
+  left: 20px;
 
+}
+.benefits__item-title{
+  font-size: 24px;
+  color: #000000;
+  padding-top: 130px;
+  position: relative;
+  &.lnr::before{
+    position: absolute;
+    top: 30px;
+    left: 125px;
+    font-size: 55px;
+  }
+}
+.benefits__item-text{
+  margin-top: 25px;
+  line-height: 30px;
+}
+.lnr-license::before{
+  color: $blue;
+}
+.lnr-magic-wand::before{
+  color: #7f4ec2;
+}
+.lnr-lock::before{
+  color: $green;
+}
+.lnr-chart-bars::before{
+  color: $orange;
+}
+.lnr-leaf::before{
+  color: $green;
+}
+.lnr-phone::before{
+  color: $red;
+}
+
+//end benefits
