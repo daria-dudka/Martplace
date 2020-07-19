@@ -793,22 +793,26 @@
 //end statistics
 //start benefits
 .benefits__inner,
-.feedback__inner{
+.feedback__inner,
+.news__inner{
   padding: 100px 0 115px 0;
   text-align: center;
 }
 .benefits__title,
-.feedback__title{
+.feedback__title,
+.news__title{
   color: #000000;
   font-size: 36px;
   margin-top: 10px;
 }
 .benefits__title-span,
-.feedback__title-span{
+.feedback__title-span,
+.news__title-span{
   color: $blue;
 }
 .benefits__text,
-.feedback__text{
+.feedback__text,
+.news__text{
   max-width: 680px;
   margin: 0 auto;
   line-height: 30px;
@@ -1035,3 +1039,71 @@
 }
 
 //end feedback
+//start news
+.news{
+  background-color: #eff1f5;
+  .newest__item-content{
+    text-align: left;
+    padding-bottom: 0;
+  }
+  .newest__bottom-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    line-height: 40px;
+    font-size: 15px;
+    color: #999999;
+  }
+  .newest__item-title{
+    display: block;
+    font-weight: 500;
+    font-size: 22px;
+  }
+  .newest__item-text{
+    min-height: 85px;
+  }
+}
+.news__inner{
+  padding-top: 110px;
+  padding-bottom: 120px;
+}
+.news__text{
+  margin-bottom: 10px;
+}
+.news__content{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.news__date,
+.news__comments,
+.news__preview{
+  padding-left: 25px;
+  position: relative;
+  color: #7e7e7e;
+  &::before{
+  font-family: 'Linearicons-Free';
+  position: absolute;
+  font-size: 15px;
+  font-weight: 700;
+  left: 0;
+  }
+}
+.news__date{
+  padding-right: 47px;
+  border-right: 1px solid #ececec;
+  &::before{
+  content: "\e864";
+  color: $blue;
+  }
+}
+.news__comments::before{
+  content: "\e83f";
+}
+.news__preview::before{
+  content: "\e81b";
+}
+
+//end news
