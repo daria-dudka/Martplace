@@ -1107,3 +1107,49 @@
 }
 
 //end news
+//start guarantee
+
+.guarantee__inner{
+  display: flex;
+  text-align: center;
+}
+.guarantee__item{
+  width: 50%;
+  padding: 210px 0 60px 0;
+  position: relative;
+}
+.border{
+  border-right: 1px solid #ececec;;
+}
+.guarantee__title{
+  font-size: 24px;
+  color: #000000;
+  &::before{
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 60px;
+    width: 160px;
+    height: 120px;
+  }
+}
+.guarantee__title--money{
+  &::before{
+    background-image: url(../images/guarantee.png);
+    right: 190px;
+  }
+  .guarantee__title-span{
+    color: $blue;
+  }
+}
+.guarantee__title--support{
+  &::before{
+    background-image: url(../images/support.png);
+    left: 215px;
+  }
+  .guarantee__title-span{
+    color: $purple;
+  }
+}
+
+//end guarantee
