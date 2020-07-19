@@ -792,19 +792,23 @@
 }
 //end statistics
 //start benefits
-.benefits__inner{
+.benefits__inner,
+.feedback__inner{
   padding: 100px 0 115px 0;
   text-align: center;
 }
-.benefits__title{
+.benefits__title,
+.feedback__title{
   color: #000000;
   font-size: 36px;
   margin-top: 10px;
 }
-.benefits__title-span{
+.benefits__title-span,
+.feedback__title-span{
   color: $blue;
 }
-.benefits__text{
+.benefits__text,
+.feedback__text{
   max-width: 680px;
   margin: 0 auto;
   line-height: 30px;
@@ -872,6 +876,7 @@
 
 //end benefits
 //start options
+
 .options-inner{
   display: flex;
   justify-content: space-between;
@@ -916,7 +921,7 @@
 }
 .options__item-text{
   line-height: 30px;
-  margin-bottom: 60px;
+  margin-bottom: 70px;
 }
 .options__item-btn{
   background-color: #ffffff;
@@ -950,3 +955,83 @@
     background-image: url(../images/icons/buy.svg);
   }
 }
+
+//end options
+//start feedback
+.feedback__slider{
+  margin-top: 27px;
+}
+.feedback__item{
+  max-width: 550px;
+  width: 100%;
+  box-shadow: 0px 2px 32px 0px rgba(0, 0, 0, 0.08);
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  padding: 50px 35px 35px 35px;
+  border-left: 2px solid $blue;
+  position: relative;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.feedback__item-user{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  position: relative;
+  &::before{
+    content: "\e83f";
+    position: absolute;
+    font-family: 'Linearicons-Free';
+    font-size: 55px;
+    color: #e8e8e8;
+    top: 0;
+    right: 10px;
+  }
+}
+.feedback__item-img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.feedback__item-name{
+  font-size: 20px;
+  color: #000000;
+}
+.feedback__item-profession{
+  display: block;
+  font-size: 16px;
+  color: $text;
+  padding-top: 10px;
+}
+.feedback__item-text{
+  text-align: left;
+  line-height: 30px;
+}
+.lnr-chevron-left,
+.lnr-chevron-right{
+  position: absolute;
+  font-size: 16px;
+  text-align: center;
+  top: 40%;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 15px 0px rgba(67, 67, 67, 0.15);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+}
+.lnr-chevron-left{
+  color: $purple;
+  left: -20px;
+}
+.lnr-chevron-right{
+  color: $blue;
+  right: -12px;
+}
+.feedback-btn{
+  display: inline-block;
+  margin-top: 30px;
+}
+
+//end feedback

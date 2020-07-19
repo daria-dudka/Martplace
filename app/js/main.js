@@ -18,6 +18,13 @@ $(function(){
     slidesToScroll: 3
   });
 
+  $('.feedback__slider').slick({
+    prevArrow: '<button class="lnr lnr-chevron-left"></button>',
+    nextArrow: '<button class="lnr lnr-chevron-right"></button>',
+    slidesToShow: 2,
+    slidesToScroll: 2
+  });
+
 
   var mixer = mixitup('.newest__inner-box');
   
