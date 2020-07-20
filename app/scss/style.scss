@@ -1153,3 +1153,34 @@
 }
 
 //end guarantee
+//start join
+.join{
+  padding: 110px 0 130px 0;
+  background: rgb(13,62,242);
+  background: linear-gradient(270deg, rgba(13,62,242,0.9) 0%, rgba(64,48,201,0.9) 46%, rgba(114,33,160,0.9) 100%);
+}
+.join__inner{
+  text-align: center;
+  color: #ffffff;
+}
+.join__title{
+  font-size: 36px;
+}
+.join__text{
+  font-size: 18px;
+  color: #e7e7e7;
+  margin-bottom: 65px;
+}
+.join__btn{
+  padding: 19px 42px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  font-weight: 500;
+  color: $blue;
+  transition: all 0.3s;
+  &:hover{
+    background-color: $blue;
+    color: #ffffff;
+  }
+}
+//end join
