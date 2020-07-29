@@ -21,7 +21,7 @@
             <img class="header__logo-img" src="images/logo.png" alt="logo">
           </a>
           <div class="user-menu">
-            <a class="user-menu__btn btn" href="#">Become a Seller</a>
+            <a class="user-menu__btn" href="#">Become a Seller</a>
             <div class="user-menu__icons">
               <a class="user-menu__icons-btn lnr lnr-alarm" href="#">
                 <span class="user-menu__numbers user-menu__numbers-alarm">25</span>
@@ -33,15 +33,10 @@
                 <span class="user-menu__numbers user-menu__numbers-cart">2</span>
               </a>
             </div>
-            <div class="user-menu__info user-info">
-              <a class="user-info__avatar" href="#">
-                <img class="user-info__avatar-img" src="images/content/user.jpg" alt="user">
-              </a>
-              <div class="user-info__content">
-                <a class="user-info__name" href="#">Taofiq Hakim</a>
-                <a class="user-info__balance" href="#">$20.45</a>
-              </div>
-            </div>
+            <a class="user-menu__info user-info" href="#">
+              <img class="user-info__avatar" src="images/content/user.jpg" alt="user">
+              <span class="user-info__name">Taofiq Hakim <span class="user-info__balance">$20.45</span></span>
+            </a>
           </div>
         </div>
       </div>
@@ -81,10 +76,9 @@
             </nav>
           </div>
           <div class="header__search">
-            <form class="header__search-form">
-              <label><input class="header__search-input" type="search" placeholder="Search product here..."
-                  required></label>
-              <button class="header__search-btn btn" type="submit">
+            <form class="header__form form">
+              <label><input class="form__input" type="search" placeholder="Search product here..." name="search" required></label>
+              <button class="form__btn" type="submit">search
                 <span class="lnr lnr-magnifier"></span>
               </button>
             </form>
@@ -105,11 +99,11 @@
           <p class="search__inner-text">
             MartPlace is the most powerful, & customizable template for Easy Digital Downloads Products
           </p>
-          <a class="search__inner-btn" href="#">View All Products</a>
-          <a class="search__inner-btn" href="#">Popular Products</a>
+          <a class="button search__button" href="#">View All Products</a>
+          <a class="button search__button" href="#">Popular Products</a>
           <form class="search__form">
             <div class="search__wrapper">
-              <label><input class="search__input" type="search" placeholder="Search your products..."></label>
+              <label><input class="search__input" type="search" placeholder="Search your products..." name="search"></label>
               <select class="search__select">
                 <option>All Categories</option>
                 <option>Plugins</option>
@@ -134,7 +128,7 @@
       <div class="container">
         <div class="advantages__inner">
           <article class="advantages__item">
-            <div class="advantages__item-image image-research">
+            <div class="advantages__item-image" style="background-image: url(../images/advantages-1.png);">
             </div>
             <div class="advantages__item-title">
               Best UX Research
@@ -146,7 +140,8 @@
             </p>
           </article>
           <article class="advantages__item">
-            <div class="advantages__item-image image-responsive">
+            <div class="advantages__item-image image-responsive"
+              style="background-image: url(../images/advantages-2.png);">
             </div>
             <div class="advantages__item-title">
               Fully Responsive
@@ -158,7 +153,7 @@
             </p>
           </article>
           <article class="advantages__item">
-            <div class="advantages__item-image image-sell">
+            <div class="advantages__item-image" style=" background-image: url(../images/advantages-3.png);">
             </div>
             <div class="advantages__item-title">
               Buy & Sell Easily
@@ -173,102 +168,108 @@
       </div>
     </section>
 
-    <section class="slider">
+    <section class="weekly">
       <div class="container">
-        <div class="slider__title title">
-          Weekly Featured Products
+        <div class="title weekly__title">
+          <span class="title__text"> Weekly Featured Products</span>
+          <div class="slider-buttons weekly__slider-buttons">
+          </div>
         </div>
-        <div class="slider__inner">
-          <div class="slider__item">
-            <div class="slider__box">
-              <a class="slider__item-img" href="#" style="background-image: url(images/content/slider.jpg);"></a>
-              <div class="slider__item-hover">
-                <a class="item-hover__link" href="#">More Info</a>
-                <a class="item-hover__link" href="#">Live Demo</a>
+        <div class="slider weekly__slider">
+          <article class="slider-item weekly__slider-item">
+            <div class="slider-item__box">
+              <img class="slider-item__img" src="images/content/slider.jpg" alt="weekly-slider">
+              <div class="slider-item__hover hover">
+                <a class="hover__link" href="#">More Info</a>
+                <a class="hover__link" href="#">Live Demo</a>
               </div>
-              <div class="slider__item-content">
-                <div class="slider__item-top">
-                  <a class="slider__item-title" href="#">
+              <div class="slider-item__content">
+                <div class="slider-item__top">
+                  <a class="slider-item__title" href="#">
                     One Page Resume Template
                   </a>
-                  <div class="slider__item-btn item-btn">
-                    <a class="item-btn__link" href="#">
-                      <img class="item-btn__avatar" src="images/content/user.jpg" alt="avatar">
-                      <span class="item-btn__company">AazzTech</span>
+                  <div class="slider-item__info info">
+                    <a class="user info__user" href="#">
+                      <img class="user__avatar" src="images/content/user.jpg" alt="avatar">
+                      <span class="user__name">AazzTech</span>
                     </a>
-                    <a class="item-btn__link item-btn__type" href="#">WordPress</a>
+                    <a class="category info__category" href="#">WordPress</a>
                   </div>
-                  <p class="slider__item-text">
+                  <p class="slider-item__text">
                     Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
                     quam aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
                     mattis, leo quam aliquet congue justo ut scelerisque.
                   </p>
-                  <div class="slider__item-category item-category">
-                    <button class="item-category__btn">website</button>
-                    <button class="item-category__btn">plugin</button>
-                    <button class="item-category__btn">landing page</button>
+                  <div class="slider-item__category-btn category-btn">
+                    <button class="slider-item__btn btn">website</button>
+                    <button class="slider-item__btn btn">plugin</button>
+                    <button class="slider-item__btn btn">landing page</button>
                   </div>
                 </div>
-                <div class="slider__item-bottom item-bottom">
-                  <div class="item-bottom__content">
-                    <a class="item-bottom__price" href="#">
+                <div class="slider-item__bottom bottom">
+                  <div class="bottom__content">
+                    <span class="price slider-item__price">
                       $10 - $50
-                    </a>
-                    <a class="item-bottom__likes" href="#">
+                    </span>
+                    <button class="likes slider-item__likes">
                       46
-                    </a>
-                    <a class="item-bottom__purchase" href="#">
+                    </button>
+                    <button class="purchase slider-item__purchase">
                       634
-                    </a>
+                    </button>
                   </div>
-                  <div class="rate-star"></div>
+                  <div class="rate-star" data-rateyo-rating="4.5"></div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="slider__item">
-            <div class="slider__box">
-              <a class="slider__item-img" href="#" style="background-image: url(images/content/slider.jpg);"></a>
-              <div class="slider__item-content">
-                <div class="slider__item-top">
-                  <a class="slider__item-title" href="#">
+          </article>
+          <article class="slider-item weekly__slider-item">
+            <div class="slider-item__box">
+              <img class="slider-item__img" src="images/content/slider.jpg" alt="weekly-slider">
+              <div class="slider-item__hover hover">
+                <a class="hover__link" href="#">More Info</a>
+                <a class="hover__link" href="#">Live Demo</a>
+              </div>
+              <div class="slider-item__content">
+                <div class="slider-item__top">
+                  <a class="slider-item__title" href="#">
                     One Page Resume Template
                   </a>
-                  <div class="slider__item-btn item-btn">
-                    <a class="item-btn__link" href="#">
-                      <img class="item-btn__avatar" src="images/content/user.jpg" alt="avatar">
-                      <span class="item-btn__company">AazzTech</span>
+                  <div class="slider-item__info info">
+                    <a class="user info__user" href="#">
+                      <img class="user__avatar" src="images/content/user.jpg" alt="avatar">
+                      <span class="user__name">AazzTech</span>
                     </a>
-                    <a class="item-btn__link item-btn__type" href="#">WordPress</a>
+                    <a class="category info__category" href="#">WordPress</a>
                   </div>
-                  <p class="slider__item-text">
+                  <p class="slider-item__text">
                     Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
                     quam aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
                     mattis, leo quam aliquet congue justo ut scelerisque.
                   </p>
-                  <div class="slider__item-category item-category">
-                    <button class="item-category__btn">website</button>
-                    <button class="item-category__btn">plugin</button>
-                    <button class="item-category__btn">landing page</button>
+                  <div class="slider-item__category-btn category-btn">
+                    <button class="slider-item__btn btn">website</button>
+                    <button class="slider-item__btn btn">plugin</button>
+                    <button class="slider-item__btn btn">landing page</button>
                   </div>
                 </div>
-                <div class="slider__item-bottom item-bottom">
-                  <div class="newest__bottom-content item-bottom__content">
-                    <a class="item-bottom__price" href="#">
+                <div class="slider-item__bottom bottom">
+                  <div class="bottom__content">
+                    <span class="price slider-item__price">
                       $10 - $50
-                    </a>
-                    <a class="item-bottom__likes" href="#">
+                    </span>
+                    <button class="likes slider-item__likes">
                       46
-                    </a>
-                    <a class="item-bottom__purchase" href="#">
+                    </button>
+                    <button class="purchase slider-item__purchase">
                       634
-                    </a>
+                    </button>
                   </div>
-                  <div class="rate-star"></div>
+                  <div class="rate-star" data-rateyo-rating="4.5"></div>
                 </div>
               </div>
             </div>
-          </div>
+          </article>
         </div>
 
       </div>
@@ -277,521 +278,542 @@
 
     <section class="newest">
       <div class="container">
-        <div class="newest__inner">
-          <div class="newest__inner-title title">
-            <span>Newest Release Products</span>
-            <ul class="newest__inner-filter inner-filter">
-              <li class="inner-filter__item">Filter by:
-                <ul class="inner-filter__list">
-                  <li class="inner-filter__list-item">Trending items</li>
-                  <li class="inner-filter__list-item">Best seller</li>
-                  <li class="inner-filter__list-item">Best rating</li>
-                  <li class="inner-filter__list-item">Low price</li>
-                  <li class="inner-filter__list-item">High price</li>
-                </ul>
-              </li>
-            </ul>
+        <div class="newest__title title">
+          <span class="title__text">Newest Release Products</span>
+          <div class="newest__filter filter">Filter by:
+            <div class="filter__inner">
+              <button class="filter__btn filter__btn--active" type="button">
+                Trending items
+              </button>
+              <button class="filter__btn" type="button">
+                Best seller
+              </button>
+              <button class="filter__btn" type="button">
+                Best rating
+              </button>
+              <button class="filter__btn" type="button">
+                Low price
+              </button>
+              <button class="filter__btn" type="button">
+                High price
+              </button>
+            </div>
           </div>
-          <div class="newest__inner-btn">
-            <button class="item-category__btn item-category__btn--active" type="button"
-              data-filter=".plugins">Plugins</button>
-            <button class="item-category__btn" type="button" data-filter=".wordpress">WordPress</button>
-            <button class="item-category__btn" type="button" data-filter=".site-template">Site Template</button>
-            <button class="item-category__btn" type="button" data-filter=".psd">PSD Template</button>
-            <button class="item-category__btn" type="button" data-filter=".joomla">Joomla</button>
-            <button class="item-category__btn" type="button" data-filter=".user-interface">User Interface</button>
-            <button class="item-category__btn" type="button" data-filter=".landing-page">Landing Page</button>
-            <button class="item-category__btn" type="button" data-filter=".software">Software</button>
-          </div>
-          <div class="newest__inner-box">
-            <article class="newest__item mix landing-page psd">
-              <a class="newest__item-img" href="#" style="background-image: url(images/content/newest-1.jpg);"></a>
-              <div class="newest__item-hover item-hover">
-                <a class="item-hover__link" href="#">More Info</a>
-                <a class="item-hover__link" href="#">Live Demo</a>
-              </div>
-              <div class="newest__item-content">
-                <div class="newest__item-top">
-                  <a class="newest__item-title" href="#">
-                    E-commerce Shopping Cart
-                  </a>
-                  <div class="newest__item-btn item-btn">
-                    <a class="item-btn__link" href="#">
-                      <img class="item-btn__avatar" src="images/content/user.jpg" alt="avatar">
-                      <span class="item-btn__company">Theme-Valley</span>
-                    </a>
-                    <a class="item-btn__link item-btn__type" href="#">Plugin</a>
-                  </div>
-                  <p class="newest__item-text">
-                    Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                    the mattis, leo quam aliquet congue.
-                  </p>
-                </div>
-                <div class="newest__item-bottom item-bottom">
-                  <div class="newest__bottom-content item-bottom__content">
-                    <div class="item-bottom__links">
-                      <a class="item-bottom__price newest__item-price" href="#">
-                        $20
-                      </a>
-                      <a class="item-bottom__likes" href="#">
-                        90
-                      </a>
-                    </div>
-                    <a class="item-bottom__purchase" href="#">
-                      246
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </article>
-            <article class="newest__item mix wordpress plugins">
-              <a class="newest__item-img" href="#" style="background-image: url(images/content/newest-2.jpg);"></a>
-              <div class="newest__item-hover item-hover">
-                <a class="item-hover__link" href="#">More Info</a>
-                <a class="item-hover__link" href="#">Live Demo</a>
-              </div>
-              <div class="newest__item-content">
-                <div class="newest__item-top">
-                  <a class="newest__item-title" href="#">
-                    Marketify Coffee Shop
-                  </a>
-                  <div class="newest__item-btn item-btn">
-                    <a class="item-btn__link" href="#">
-                      <img class="item-btn__avatar" src="images/content/user.jpg" alt="avatar">
-                      <span class="item-btn__company">EchoTheme</span>
-                    </a>
-                    <a class="item-btn__link item-btn__type" href="#">PSD</a>
-                  </div>
-                  <p class="newest__item-text">
-                    Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                    the mattis, leo quam aliquet congue.
-                  </p>
-                </div>
-                <div class="newest__item-bottom item-bottom">
-                  <div class="newest__bottom-content item-bottom__content">
-                    <div class="item-bottom__links">
-                      <a class="item-bottom__price newest__item-price" href="#">
-                        $18
-                      </a>
-                      <a class="item-bottom__likes" href="#">
-                        48
-                      </a>
-                    </div>
-                    <a class="item-bottom__purchase" href="#">
-                      50
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </article>
-            <article class="newest__item mix software joomla">
-              <a class="newest__item-img" href="#" style="background-image: url(images/content/newest-3.jpg);"></a>
-              <div class="newest__item-hover item-hover">
-                <a class="item-hover__link" href="#">More Info</a>
-                <a class="item-hover__link" href="#">Live Demo</a>
-              </div>
-              <div class="newest__item-content">
-                <div class="newest__item-top">
-                  <a class="newest__item-title" href="#">
-                    Bryson - Portfolio Template
-                  </a>
-                  <div class="newest__item-btn item-btn">
-                    <a class="item-btn__link" href="#">
-                      <img class="item-btn__avatar" src="images/content/user.jpg" alt="avatar">
-                      <span class="item-btn__company">Artcorner</span>
-                    </a>
-                    <a class="item-btn__link item-btn__type" href="#">HTML</a>
-                  </div>
-                  <p class="newest__item-text">
-                    Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                    the mattis, leo quam aliquet congue.
-                  </p>
-                </div>
-                <div class="newest__item-bottom item-bottom">
-                  <div class="newest__bottom-content item-bottom__content">
-                    <div class="item-bottom__links">
-                      <a class="item-bottom__price newest__item-price" href="#">
-                        $10
-                      </a>
-                      <a class="item-bottom__likes newest__likes" href="#">
-                        56
-                      </a>
-                    </div>
-                    <div class="rate-star newest__rate"></div>
-                    <a class="item-bottom__purchase" href="#">
-                      68
-                    </a>
-                  </div>
-
-                </div>
-              </div>
-            </article>
-            <article class="newest__item mix user-interface wordpress">
-              <a class="newest__item-img" href="#" style="background-image: url(images/content/newest-1.jpg);"></a>
-              <div class="newest__item-hover item-hover">
-                <a class="item-hover__link" href="#">More Info</a>
-                <a class="item-hover__link" href="#">Live Demo</a>
-              </div>
-              <div class="newest__item-content">
-                <div class="newest__item-top">
-                  <a class="newest__item-title" href="#">
-                    E-commerce Shopping Cart
-                  </a>
-                  <div class="newest__item-btn item-btn">
-                    <a class="item-btn__link" href="#">
-                      <img class="item-btn__avatar" src="images/content/user.jpg" alt="avatar">
-                      <span class="item-btn__company">Theme-Valley</span>
-                    </a>
-                    <a class="item-btn__link item-btn__type" href="#">Plugin</a>
-                  </div>
-                  <p class="newest__item-text">
-                    Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                    the mattis, leo quam aliquet congue.
-                  </p>
-                </div>
-                <div class="newest__item-bottom item-bottom">
-                  <div class="newest__bottom-content item-bottom__content">
-                    <div class="item-bottom__links">
-                      <a class="item-bottom__price newest__item-price" href="#">
-                        $10
-                      </a>
-                      <a class="item-bottom__likes newest__likes" href="#">
-                        56
-                      </a>
-                    </div>
-                    <div class="rate-star newest__rate"></div>
-                    <a class="item-bottom__purchase" href="#">
-                      686
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </article>
-            <article class="newest__item mix site-template joomla">
-              <a class="newest__item-img" href="#" style="background-image: url(images/content/newest-2.jpg);"></a>
-              <div class="newest__item-hover item-hover">
-                <a class="item-hover__link" href="#">More Info</a>
-                <a class="item-hover__link" href="#">Live Demo</a>
-              </div>
-              <div class="newest__item-content">
-                <div class="newest__item-top">
-                  <a class="newest__item-title" href="#">
-                    Marketify Coffee Shop
-                  </a>
-                  <div class="newest__item-btn item-btn">
-                    <a class="item-btn__link" href="#">
-                      <img class="item-btn__avatar" src="images/content/user.jpg" alt="avatar">
-                      <span class="item-btn__company">EchoTheme</span>
-                    </a>
-                    <a class="item-btn__link item-btn__type" href="#">PSD</a>
-                  </div>
-                  <p class="newest__item-text">
-                    Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                    the mattis, leo quam aliquet congue.
-                  </p>
-                </div>
-                <div class="newest__item-bottom item-bottom">
-                  <div class="newest__bottom-content item-bottom__content">
-                    <div class="item-bottom__links">
-                      <a class="item-bottom__price newest__item-price" href="#">
-                        $10-$50
-                      </a>
-                      <a class="item-bottom__likes" href="#">
-                        48
-                      </a>
-                    </div>
-                    <a class="item-bottom__purchase" href="#">
-                      50
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </article>
-            <article class="newest__item mix landing-page plugins">
-              <a class="newest__item-img" href="#" style="background-image: url(images/content/newest-3.jpg);"></a>
-              <div class="newest__item-hover item-hover">
-                <a class="item-hover__link" href="#">More Info</a>
-                <a class="item-hover__link" href="#">Live Demo</a>
-              </div>
-              <div class="newest__item-content">
-                <div class="newest__item-top">
-                  <a class="newest__item-title" href="#">
-                    Bryson - Portfolio Template
-                  </a>
-                  <div class="newest__item-btn item-btn">
-                    <a class="item-btn__link" href="#">
-                      <img class="item-btn__avatar" src="images/content/user.jpg" alt="avatar">
-                      <span class="item-btn__company">Artcorner</span>
-                    </a>
-                    <a class="item-btn__link item-btn__type" href="#">HTML</a>
-                  </div>
-                  <p class="newest__item-text">
-                    Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                    the mattis, leo quam aliquet congue.
-                  </p>
-                </div>
-                <div class="newest__item-bottom item-bottom">
-                  <div class="newest__bottom-content item-bottom__content">
-                    <div class="item-bottom__links">
-                      <a class="item-bottom__price newest__item-price" href="#">
-                        $10
-                      </a>
-                      <a class="item-bottom__likes newest__likes" href="#">
-                        56
-                      </a>
-                    </div>
-                    <div class="rate-star newest__rate"></div>
-                    <a class="item-bottom__purchase" href="#">
-                      686
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </div>
-          <button class="newest__button-all" type="button" data-filter="all">All New Products</button>
         </div>
+        <div class="newest__category-btn category-btn">
+          <button class="newest__btn btn btn--active" type="button" data-filter=".plugins">Plugins</button>
+          <button class="newest__btn btn" type="button" data-filter=".wordpress">WordPress</button>
+          <button class="newest__btn btn" type="button" data-filter=".site-template">Site Template</button>
+          <button class="newest__btn btn" type="button" data-filter=".psd">PSD Template</button>
+          <button class="newest__btn btn" type="button" data-filter=".joomla">Joomla</button>
+          <button class="newest__btn btn" type="button" data-filter=".user-interface">User Interface</button>
+          <button class="newest__btn btn" type="button" data-filter=".landing-page">Landing Page</button>
+          <button class="newest__btn btn" type="button" data-filter=".software">Software</button>
+        </div>
+        <div class="newest__inner">
+          <article class="item-card newest__item-card mix landing-page joomla">
+            <img class="item-card__img" src="images/content/slider.jpg" alt="item-card">
+            <div class="item-card__hover hover">
+              <a class="hover__link" href="#">More Info</a>
+              <a class="hover__link" href="#">Live Demo</a>
+            </div>
+            <div class="item-card__content">
+              <div class="item-card__top">
+                <a class="item-card__title" href="#">
+                  E-commerce Shopping Cart
+                </a>
+                <div class="item-card__info info">
+                  <a class="user info__user" href="#">
+                    <img class="user__avatar" src="images/content/user.jpg" alt="avatar">
+                    <span class="user__name">Theme-Valley</span>
+                  </a>
+                  <a class="category info__category" href="#">Plugin</a>
+                </div>
+                <p class="item-card__text">
+                  Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                  the mattis, leo quam aliquet congue.
+                </p>
+              </div>
+              <div class="item-card__bottom bottom">
+                <div class="bottom__content">
+                  <div class="bottom__links">
+                    <span class="price item-card__price">
+                      $20
+                    </span>
+                    <button class="likes item-card__likes">
+                      90
+                    </button>
+                  </div>
+                  <span class="item-card__rate-star" data-rateyo-rating="4.5"></span>
+                  <button class="purchase item-card__purchase" href="#">
+                    246
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="item-card newest__item-card mix landing-page psd">
+            <img class="item-card__img" src="images/content/slider.jpg" alt="item-card">
+            <div class="item-card__hover hover">
+              <a class="hover__link" href="#">More Info</a>
+              <a class="hover__link" href="#">Live Demo</a>
+            </div>
+            <div class="item-card__content">
+              <div class="item-card__top">
+                <a class="item-card__title" href="#">
+                  E-commerce Shopping Cart
+                </a>
+                <div class="item-card__info info">
+                  <a class="user info__user" href="#">
+                    <img class="user__avatar" src="images/content/user.jpg" alt="avatar">
+                    <span class="user__name">Theme-Valley</span>
+                  </a>
+                  <a class="category info__category" href="#">Plugin</a>
+                </div>
+                <p class="item-card__text">
+                  Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                  the mattis, leo quam aliquet congue.
+                </p>
+              </div>
+              <div class="item-card__bottom bottom">
+                <div class="bottom__content">
+                  <div class="bottom__links">
+                    <span class="price item-card__price">
+                      $20
+                    </span>
+                    <button class="likes item-card__likes">
+                      90
+                    </button>
+                  </div>
+                  <button class="purchase item-card__purchase" href="#">
+                    246
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="item-card newest__item-card mix site-template wordpress">
+            <img class="item-card__img" src="images/content/slider.jpg" alt="item-card">
+            <div class="item-card__hover hover">
+              <a class="hover__link" href="#">More Info</a>
+              <a class="hover__link" href="#">Live Demo</a>
+            </div>
+            <div class="item-card__content">
+              <div class="item-card__top">
+                <a class="item-card__title" href="#">
+                  E-commerce Shopping Cart
+                </a>
+                <div class="item-card__info info">
+                  <a class="user info__user" href="#">
+                    <img class="user__avatar" src="images/content/user.jpg" alt="avatar">
+                    <span class="user__name">Theme-Valley</span>
+                  </a>
+                  <a class="category info__category" href="#">Plugin</a>
+                </div>
+                <p class="item-card__text">
+                  Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                  the mattis, leo quam aliquet congue.
+                </p>
+              </div>
+              <div class="item-card__bottom bottom">
+                <div class="bottom__content">
+                  <div class="bottom__links">
+                    <span class="price item-card__price">
+                      $20
+                    </span>
+                    <button class="likes item-card__likes">
+                      90
+                    </button>
+                  </div>
+                  <span class="item-card__rate-star" data-rateyo-rating="4.5"></span>
+                  <button class="purchase item-card__purchase" href="#">
+                    246
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="item-card newest__item-card mix site-template psd">
+            <img class="item-card__img" src="images/content/slider.jpg" alt="item-card">
+            <div class="item-card__hover hover">
+              <a class="hover__link" href="#">More Info</a>
+              <a class="hover__link" href="#">Live Demo</a>
+            </div>
+            <div class="item-card__content">
+              <div class="item-card__top">
+                <a class="item-card__title" href="#">
+                  E-commerce Shopping Cart
+                </a>
+                <div class="item-card__info info">
+                  <a class="user info__user" href="#">
+                    <img class="user__avatar" src="images/content/user.jpg" alt="avatar">
+                    <span class="user__name">Theme-Valley</span>
+                  </a>
+                  <a class="category info__category" href="#">Plugin</a>
+                </div>
+                <p class="item-card__text">
+                  Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                  the mattis, leo quam aliquet congue.
+                </p>
+              </div>
+              <div class="item-card__bottom bottom">
+                <div class="bottom__content">
+                  <div class="bottom__links">
+                    <span class="price item-card__price">
+                      $20
+                    </span>
+                    <button class="likes item-card__likes">
+                      90
+                    </button>
+                  </div>
+                  <span class="item-card__rate-star" data-rateyo-rating="4.5"></span>
+                  <button class="purchase item-card__purchase" href="#">
+                    246
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="item-card newest__item-card mix sowtware plugins">
+            <img class="item-card__img" src="images/content/slider.jpg" alt="item-card">
+            <div class="item-card__hover hover">
+              <a class="hover__link" href="#">More Info</a>
+              <a class="hover__link" href="#">Live Demo</a>
+            </div>
+            <div class="item-card__content">
+              <div class="item-card__top">
+                <a class="item-card__title" href="#">
+                  E-commerce Shopping Cart
+                </a>
+                <div class="item-card__info info">
+                  <a class="user info__user" href="#">
+                    <img class="user__avatar" src="images/content/user.jpg" alt="avatar">
+                    <span class="user__name">Theme-Valley</span>
+                  </a>
+                  <a class="category info__category" href="#">Plugin</a>
+                </div>
+                <p class="item-card__text">
+                  Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                  the mattis, leo quam aliquet congue.
+                </p>
+              </div>
+              <div class="item-card__bottom bottom">
+                <div class="bottom__content">
+                  <div class="bottom__links">
+                    <span class="price item-card__price">
+                      $20
+                    </span>
+                    <button class="likes item-card__likes">
+                      90
+                    </button>
+                  </div>
+                  <button class="purchase item-card__purchase" href="#">
+                    246
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="item-card newest__item-card mix landing-page psd wordpress">
+            <img class="item-card__img" src="images/content/slider.jpg" alt="item-card">
+            <div class="item-card__hover hover">
+              <a class="hover__link" href="#">More Info</a>
+              <a class="hover__link" href="#">Live Demo</a>
+            </div>
+            <div class="item-card__content">
+              <div class="item-card__top">
+                <a class="item-card__title" href="#">
+                  E-commerce Shopping Cart
+                </a>
+                <div class="item-card__info info">
+                  <a class="user info__user" href="#">
+                    <img class="user__avatar" src="images/content/user.jpg" alt="avatar">
+                    <span class="user__name">Theme-Valley</span>
+                  </a>
+                  <a class="category info__category" href="#">Plugin</a>
+                </div>
+                <p class="item-card__text">
+                  Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                  the mattis, leo quam aliquet congue.
+                </p>
+              </div>
+              <div class="item-card__bottom bottom">
+                <div class="bottom__content">
+                  <div class="bottom__links">
+                    <span class="price item-card__price">
+                      $20
+                    </span>
+                    <button class="likes item-card__likes">
+                      90
+                    </button>
+                  </div>
+                  <span class="item-card__rate-star" data-rateyo-rating="4.5"></span>
+                  <button class="purchase item-card__purchase" href="#">
+                    246
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <button class="newest__button button" type="button" data-filter="all">All New Products</button>
       </div>
     </section>
 
     <section class="followers-slider">
       <div class="container">
-        <div class="followers-slider__title title">
-          Your Followers Feed
+        <div class="title followers-slider__title">
+          <span class="title__text"> Weekly Featured Products</span>
+          <div class="slider-buttons followers-slider__slider-buttons">
+          </div>
         </div>
         <div class="followers-slider__inner">
-          <div class="followers-slider__inner-box">
-            <article class="newest__item">
-              <a class="newest__item-img" href="#" style="background-image: url(images/content/slider-4.jpg);"></a>
-              <div class="newest__item-content">
-                <div class="newest__item-top">
-                  <a class="newest__item-title" href="#">
-                    Bryson - Portfolio Template
+          <article class="item-card followers__item-card">
+            <img class="item-card__img" src="images/content/slider.jpg" alt="item-card">
+            <div class="item-card__hover hover">
+              <a class="hover__link" href="#">More Info</a>
+              <a class="hover__link" href="#">Live Demo</a>
+            </div>
+            <div class="item-card__content">
+              <div class="item-card__top">
+                <a class="item-card__title" href="#">
+                  E-commerce Shopping Cart
+                </a>
+                <div class="item-card__info info">
+                  <a class="user info__user" href="#">
+                    <img class="user__avatar" src="images/content/user.jpg" alt="avatar">
+                    <span class="user__name">Theme-Valley</span>
                   </a>
-                  <div class="newest__item-btn item-btn">
-                    <a class="item-btn__link" href="#">
-                      <img class="item-btn__avatar" src="images/content/user.jpg" alt="avatar">
-                      <span class="item-btn__company">Artcorner</span>
-                    </a>
-                    <a class="item-btn__link item-btn__type" href="#">HTML</a>
-                  </div>
-                  <p class="newest__item-text">
-                    Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                    the mattis, leo quam aliquet congue.
-                  </p>
+                  <a class="category info__category" href="#">Plugin</a>
                 </div>
-                <div class="newest__item-bottom item-bottom">
-                  <div class="newest__bottom-content item-bottom__content">
-                    <div class="item-bottom__links">
-                      <a class="item-bottom__price newest__item-price" href="#">
-                        $10
-                      </a>
-                      <a class="item-bottom__likes newest__likes" href="#">
-                        56
-                      </a>
-                    </div>
-                    <div class="rate-star newest__rate"></div>
-                    <a class="item-bottom__purchase" href="#">
-                      68
-                    </a>
+                <p class="item-card__text">
+                  Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                  the mattis, leo quam aliquet congue.
+                </p>
+              </div>
+              <div class="item-card__bottom bottom">
+                <div class="bottom__content">
+                  <div class="bottom__links">
+                    <span class="price item-card__price">
+                      $20
+                    </span>
+                    <button class="likes item-card__likes">
+                      90
+                    </button>
                   </div>
+                  <span class="item-card__rate-star" data-rateyo-rating="4.5"></span>
+                  <button class="purchase item-card__purchase" href="#">
+                    246
+                  </button>
                 </div>
               </div>
-            </article>
-          </div>
-          <div class="followers-slider__inner-box">
-            <article class="newest__item">
-              <a class="newest__item-img" href="#" style="background-image: url(images/content/slider-5.jpg);"></a>
-              <div class="newest__item-content">
-                <div class="newest__item-top">
-                  <a class="newest__item-title" href="#">
-                    Bryson - Portfolio Template
+            </div>
+          </article>
+          <article class="item-card followers__item-card">
+            <img class="item-card__img" src="images/content/slider.jpg" alt="item-card">
+            <div class="item-card__hover hover">
+              <a class="hover__link" href="#">More Info</a>
+              <a class="hover__link" href="#">Live Demo</a>
+            </div>
+            <div class="item-card__content">
+              <div class="item-card__top">
+                <a class="item-card__title" href="#">
+                  E-commerce Shopping Cart
+                </a>
+                <div class="item-card__info info">
+                  <a class="user info__user" href="#">
+                    <img class="user__avatar" src="images/content/user.jpg" alt="avatar">
+                    <span class="user__name">Theme-Valley</span>
                   </a>
-                  <div class="newest__item-btn item-btn">
-                    <a class="item-btn__link" href="#">
-                      <img class="item-btn__avatar" src="images/content/user.jpg" alt="avatar">
-                      <span class="item-btn__company">Artcorner</span>
-                    </a>
-                    <a class="item-btn__link item-btn__type" href="#">HTML</a>
-                  </div>
-                  <p class="newest__item-text">
-                    Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                    the mattis, leo quam aliquet congue.
-                  </p>
+                  <a class="category info__category" href="#">Plugin</a>
                 </div>
-                <div class="newest__item-bottom item-bottom">
-                  <div class="newest__bottom-content item-bottom__content">
-                    <div class="item-bottom__links">
-                      <a class="item-bottom__price newest__item-price" href="#">
-                        $10
-                      </a>
-                      <a class="item-bottom__likes newest__likes" href="#">
-                        56
-                      </a>
-                    </div>
-                    <a class="item-bottom__purchase" href="#">
-                      68
-                    </a>
+                <p class="item-card__text">
+                  Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                  the mattis, leo quam aliquet congue.
+                </p>
+              </div>
+              <div class="item-card__bottom bottom">
+                <div class="bottom__content">
+                  <div class="bottom__links">
+                    <span class="price item-card__price">
+                      $20
+                    </span>
+                    <button class="likes item-card__likes">
+                      90
+                    </button>
                   </div>
+                  <span class="item-card__rate-star" data-rateyo-rating="4.5"></span>
+                  <button class="purchase item-card__purchase" href="#">
+                    246
+                  </button>
                 </div>
               </div>
-            </article>
-          </div>
-          <div class="followers-slider__inner-box">
-            <article class="newest__item">
-              <a class="newest__item-img" href="#" style="background-image: url(images/content/slider-6.jpg);"></a>
-              <div class="newest__item-content">
-                <div class="newest__item-top">
-                  <a class="newest__item-title" href="#">
-                    Bryson - Portfolio Template
+            </div>
+          </article>
+          <article class="item-card followers__item-card">
+            <img class="item-card__img" src="images/content/slider.jpg" alt="item-card">
+            <div class="item-card__hover hover">
+              <a class="hover__link" href="#">More Info</a>
+              <a class="hover__link" href="#">Live Demo</a>
+            </div>
+            <div class="item-card__content">
+              <div class="item-card__top">
+                <a class="item-card__title" href="#">
+                  E-commerce Shopping Cart
+                </a>
+                <div class="item-card__info info">
+                  <a class="user info__user" href="#">
+                    <img class="user__avatar" src="images/content/user.jpg" alt="avatar">
+                    <span class="user__name">Theme-Valley</span>
                   </a>
-                  <div class="newest__item-btn item-btn">
-                    <a class="item-btn__link" href="#">
-                      <img class="item-btn__avatar" src="images/content/user.jpg" alt="avatar">
-                      <span class="item-btn__company">Artcorner</span>
-                    </a>
-                    <a class="item-btn__link item-btn__type" href="#">HTML</a>
-                  </div>
-                  <p class="newest__item-text">
-                    Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                    the mattis, leo quam aliquet congue.
-                  </p>
+                  <a class="category info__category" href="#">Plugin</a>
                 </div>
-                <div class="newest__item-bottom item-bottom">
-                  <div class="newest__bottom-content item-bottom__content">
-                    <div class="item-bottom__links">
-                      <a class="item-bottom__price newest__item-price" href="#">
-                        $10
-                      </a>
-                      <a class="item-bottom__likes newest__likes" href="#">
-                        56
-                      </a>
-                    </div>
-                    <div class="rate-star newest__rate"></div>
-                    <a class="item-bottom__purchase" href="#">
-                      68
-                    </a>
+                <p class="item-card__text">
+                  Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                  the mattis, leo quam aliquet congue.
+                </p>
+              </div>
+              <div class="item-card__bottom bottom">
+                <div class="bottom__content">
+                  <div class="bottom__links">
+                    <span class="price item-card__price">
+                      $20
+                    </span>
+                    <button class="likes item-card__likes">
+                      90
+                    </button>
                   </div>
+                  <span class="item-card__rate-star" data-rateyo-rating="4.5"></span>
+                  <button class="purchase item-card__purchase" href="#">
+                    246
+                  </button>
                 </div>
               </div>
-            </article>
-          </div>
-          <div class="followers-slider__inner-box">
-            <article class="newest__item">
-              <a class="newest__item-img" href="#" style="background-image: url(images/content/slider-4.jpg);"></a>
-              <div class="newest__item-content">
-                <div class="newest__item-top">
-                  <a class="newest__item-title" href="#">
-                    Bryson - Portfolio Template
+            </div>
+          </article>
+          <article class="item-card followers__item-card">
+            <img class="item-card__img" src="images/content/slider.jpg" alt="item-card">
+            <div class="item-card__hover hover">
+              <a class="hover__link" href="#">More Info</a>
+              <a class="hover__link" href="#">Live Demo</a>
+            </div>
+            <div class="item-card__content">
+              <div class="item-card__top">
+                <a class="item-card__title" href="#">
+                  E-commerce Shopping Cart
+                </a>
+                <div class="item-card__info info">
+                  <a class="user info__user" href="#">
+                    <img class="user__avatar" src="images/content/user.jpg" alt="avatar">
+                    <span class="user__name">Theme-Valley</span>
                   </a>
-                  <div class="newest__item-btn item-btn">
-                    <a class="item-btn__link" href="#">
-                      <img class="item-btn__avatar" src="images/content/user.jpg" alt="avatar">
-                      <span class="item-btn__company">Artcorner</span>
-                    </a>
-                    <a class="item-btn__link item-btn__type" href="#">HTML</a>
-                  </div>
-                  <p class="newest__item-text">
-                    Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                    the mattis, leo quam aliquet congue.
-                  </p>
+                  <a class="category info__category" href="#">Plugin</a>
                 </div>
-                <div class="newest__item-bottom item-bottom">
-                  <div class="newest__bottom-content item-bottom__content">
-                    <div class="item-bottom__links">
-                      <a class="item-bottom__price newest__item-price" href="#">
-                        $10
-                      </a>
-                      <a class="item-bottom__likes newest__likes" href="#">
-                        56
-                      </a>
-                    </div>
-                    <div class="rate-star newest__rate"></div>
-                    <a class="item-bottom__purchase" href="#">
-                      68
-                    </a>
+                <p class="item-card__text">
+                  Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                  the mattis, leo quam aliquet congue.
+                </p>
+              </div>
+              <div class="item-card__bottom bottom">
+                <div class="bottom__content">
+                  <div class="bottom__links">
+                    <span class="price item-card__price">
+                      $20
+                    </span>
+                    <button class="likes item-card__likes">
+                      90
+                    </button>
                   </div>
+                  <span class="item-card__rate-star" data-rateyo-rating="4.5"></span>
+                  <button class="purchase item-card__purchase" href="#">
+                    246
+                  </button>
                 </div>
               </div>
-            </article>
-          </div>
-          <div class="followers-slider__inner-box">
-            <article class="newest__item">
-              <a class="newest__item-img" href="#" style="background-image: url(images/content/slider-5.jpg);"></a>
-              <div class="newest__item-content">
-                <div class="newest__item-top">
-                  <a class="newest__item-title" href="#">
-                    Bryson - Portfolio Template
+            </div>
+          </article>
+          <article class="item-card followers__item-card">
+            <img class="item-card__img" src="images/content/slider.jpg" alt="item-card">
+            <div class="item-card__hover hover">
+              <a class="hover__link" href="#">More Info</a>
+              <a class="hover__link" href="#">Live Demo</a>
+            </div>
+            <div class="item-card__content">
+              <div class="item-card__top">
+                <a class="item-card__title" href="#">
+                  E-commerce Shopping Cart
+                </a>
+                <div class="item-card__info info">
+                  <a class="user info__user" href="#">
+                    <img class="user__avatar" src="images/content/user.jpg" alt="avatar">
+                    <span class="user__name">Theme-Valley</span>
                   </a>
-                  <div class="newest__item-btn item-btn">
-                    <a class="item-btn__link" href="#">
-                      <img class="item-btn__avatar" src="images/content/user.jpg" alt="avatar">
-                      <span class="item-btn__company">Artcorner</span>
-                    </a>
-                    <a class="item-btn__link item-btn__type" href="#">HTML</a>
-                  </div>
-                  <p class="newest__item-text">
-                    Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                    the mattis, leo quam aliquet congue.
-                  </p>
+                  <a class="category info__category" href="#">Plugin</a>
                 </div>
-                <div class="newest__item-bottom item-bottom">
-                  <div class="newest__bottom-content item-bottom__content">
-                    <div class="item-bottom__links">
-                      <a class="item-bottom__price newest__item-price" href="#">
-                        $10
-                      </a>
-                      <a class="item-bottom__likes newest__likes" href="#">
-                        56
-                      </a>
-                    </div>
-                    <a class="item-bottom__purchase" href="#">
-                      68
-                    </a>
+                <p class="item-card__text">
+                  Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                  the mattis, leo quam aliquet congue.
+                </p>
+              </div>
+              <div class="item-card__bottom bottom">
+                <div class="bottom__content">
+                  <div class="bottom__links">
+                    <span class="price item-card__price">
+                      $20
+                    </span>
+                    <button class="likes item-card__likes">
+                      90
+                    </button>
                   </div>
+                  <span class="item-card__rate-star" data-rateyo-rating="4.5"></span>
+                  <button class="purchase item-card__purchase" href="#">
+                    246
+                  </button>
                 </div>
               </div>
-            </article>
-          </div>
-          <div class="followers-slider__inner-box">
-            <article class="newest__item">
-              <a class="newest__item-img" href="#" style="background-image: url(images/content/slider-6.jpg);"></a>
-              <div class="newest__item-content">
-                <div class="newest__item-top">
-                  <a class="newest__item-title" href="#">
-                    Bryson - Portfolio Template
+            </div>
+          </article>
+          <article class="item-card followers__item-card">
+            <img class="item-card__img" src="images/content/slider.jpg" alt="item-card">
+            <div class="item-card__hover hover">
+              <a class="hover__link" href="#">More Info</a>
+              <a class="hover__link" href="#">Live Demo</a>
+            </div>
+            <div class="item-card__content">
+              <div class="item-card__top">
+                <a class="item-card__title" href="#">
+                  E-commerce Shopping Cart
+                </a>
+                <div class="item-card__info info">
+                  <a class="user info__user" href="#">
+                    <img class="user__avatar" src="images/content/user.jpg" alt="avatar">
+                    <span class="user__name">Theme-Valley</span>
                   </a>
-                  <div class="newest__item-btn item-btn">
-                    <a class="item-btn__link" href="#">
-                      <img class="item-btn__avatar" src="images/content/user.jpg" alt="avatar">
-                      <span class="item-btn__company">Artcorner</span>
-                    </a>
-                    <a class="item-btn__link item-btn__type" href="#">HTML</a>
-                  </div>
-                  <p class="newest__item-text">
-                    Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                    the mattis, leo quam aliquet congue.
-                  </p>
+                  <a class="category info__category" href="#">Plugin</a>
                 </div>
-                <div class="newest__item-bottom item-bottom">
-                  <div class="newest__bottom-content item-bottom__content">
-                    <div class="item-bottom__links">
-                      <a class="item-bottom__price newest__item-price" href="#">
-                        $10
-                      </a>
-                      <a class="item-bottom__likes newest__likes" href="#">
-                        56
-                      </a>
-                    </div>
-                    <div class="rate-star newest__rate"></div>
-                    <a class="item-bottom__purchase" href="#">
-                      68
-                    </a>
+                <p class="item-card__text">
+                  Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                  the mattis, leo quam aliquet congue.
+                </p>
+              </div>
+              <div class="item-card__bottom bottom">
+                <div class="bottom__content">
+                  <div class="bottom__links">
+                    <span class="price item-card__price">
+                      $20
+                    </span>
+                    <button class="likes item-card__likes">
+                      90
+                    </button>
                   </div>
+                  <span class="item-card__rate-star" data-rateyo-rating="4.5"></span>
+                  <button class="purchase item-card__purchase" href="#">
+                    246
+                  </button>
                 </div>
               </div>
-            </article>
-          </div>
+            </div>
+          </article>
 
         </div>
 
@@ -803,36 +825,36 @@
       <div class="container">
         <div class="statistics__inner">
           <div class="statistics__item">
-            <div class="statistics__item-number statistics__item-number--items">
+            <span class="statistics__item-number statistics__item-number--items">
               38,436
-            </div>
-            <div class="statistics__item-title ">
+            </span>
+            <span class="statistics__item-title ">
               items for sale
-            </div>
+            </span>
           </div>
           <div class="statistics__item">
-            <div class="statistics__item-number statistics__item-number--sales">
+            <span class="statistics__item-number statistics__item-number--sales">
               3,736
-            </div>
-            <div class="statistics__item-title">
+            </span>
+            <span class="statistics__item-title">
               total sales
-            </div>
+            </span>
           </div>
           <div class="statistics__item">
-            <div class="statistics__item-number statistics__item-number--customers">
+            <span class="statistics__item-number statistics__item-number--customers">
               2,736
-            </div>
-            <div class="statistics__item-title">
+            </span>
+            <span class="statistics__item-title">
               happy customers
-            </div>
+            </span>
           </div>
           <div class="statistics__item">
-            <div class="statistics__item-number statistics__item-number--members">
+            <span class="statistics__item-number statistics__item-number--members">
               25,736
-            </div>
-            <div class="statistics__item-title">
+            </span>
+            <span class="statistics__item-title">
               members
-            </div>
+            </span>
           </div>
         </div>
       </div>
@@ -850,7 +872,6 @@
           </p>
           <div class="benefits__items-box">
             <div class="benefits__item">
-              <span class="benefits__item-number">01</span>
               <div class="benefits__item-title lnr lnr-license">
                 One Time Payment
               </div>
@@ -861,7 +882,6 @@
               </p>
             </div>
             <div class="benefits__item">
-              <span class="benefits__item-number">02</span>
               <div class="benefits__item-title lnr lnr-magic-wand">
                 Quality Products
               </div>
@@ -872,7 +892,6 @@
               </p>
             </div>
             <div class="benefits__item">
-              <span class="benefits__item-number">03</span>
               <div class="benefits__item-title lnr lnr-lock">
                 100% Secure Payment
               </div>
@@ -883,7 +902,6 @@
               </p>
             </div>
             <div class="benefits__item">
-              <span class="benefits__item-number">04</span>
               <div class="benefits__item-title lnr lnr-chart-bars">
                 Well Organized Code
               </div>
@@ -894,7 +912,6 @@
               </p>
             </div>
             <div class="benefits__item">
-              <span class="benefits__item-number">05</span>
               <div class="benefits__item-title lnr lnr-leaf">
                 Life Time Free Update
               </div>
@@ -905,7 +922,6 @@
               </p>
             </div>
             <div class="benefits__item">
-              <span class="benefits__item-number">06</span>
               <div class="benefits__item-title lnr lnr-phone">
                 Fast and Friendly Support
               </div>
@@ -932,7 +948,7 @@
                 Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
                 the mattis, leo quam aliquet diamcongue is laoreet elit metus.
               </p>
-              <a class="options__item-btn" href="#">Become an Author</a>
+              <a class="button options__button" href="#">Become an Author</a>
             </div>
           </div>
           <div class="options__item options__item-buy">
@@ -944,7 +960,7 @@
                 Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
                 the mattis, leo quam aliquet diamcongue is laoreet elit metus.
               </p>
-              <a class="options__item-btn" href="#">Start Shopping</a>
+              <a class="button options__button" href="#">Start Shopping</a>
             </div>
           </div>
         </div>
@@ -962,82 +978,77 @@
             laborum dolo rumes fugats untras.
           </p>
           <div class="feedback__slider">
-            <div class="feedback__item-box">
-              <article class="feedback__item">
-                <div class="feedback__item-user">
-                  <img class="feedback__item-img" src="images/content/user.jpg" alt="avatar">
-                  <a class="feedback__item-name" href="#">
-                    Taofiqul Hakim
-                    <span class="feedback__item-profession">
-                      Product Designer
-                    </span>
-                  </a>
-                </div>
-                <p class="feedback__item-text">
-                  Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
-                  aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id nisi interdum is mollis.
-                  Praesent the pharetra, justo ut scelerisque.
-                </p>
-              </article>
-            </div>
-            <div class="feedback__item-box">
-              <article class="feedback__item">
-                <div class="feedback__item-user">
-                  <img class="feedback__item-img" src="images/content/user.jpg" alt="avatar">
-                  <a class="feedback__item-name" href="#">
-                    Taofiqul Hakim
-                    <span class="feedback__item-profession">
-                      Product Designer
-                    </span>
-                  </a>
-                </div>
-                <p class="feedback__item-text">
-                  Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
-                  aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id nisi interdum is mollis.
-                  Praesent the pharetra, justo ut scelerisque.
-                </p>
-              </article>
-            </div>
-            <div class="feedback__item-box">
-              <article class="feedback__item">
-                <div class="feedback__item-user">
-                  <img class="feedback__item-img" src="images/content/user.jpg" alt="avatar">
-                  <a class="feedback__item-name" href="#">
-                    Taofiqul Hakim
-                    <span class="feedback__item-profession">
-                      Product Designer
-                    </span>
-                  </a>
-                </div>
-                <p class="feedback__item-text">
-                  Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
-                  aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id nisi interdum is mollis.
-                  Praesent the pharetra, justo ut scelerisque.
-                </p>
-              </article>
-            </div>
-            <div class="feedback__item-box">
-              <article class="feedback__item">
-                <div class="feedback__item-user">
-                  <img class="feedback__item-img" src="images/content/user.jpg" alt="avatar">
-                  <a class="feedback__item-name" href="#">
-                    Taofiqul Hakim
-                    <span class="feedback__item-profession">
-                      Product Designer
-                    </span>
-                  </a>
-                </div>
-                <p class="feedback__item-text">
-                  Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
-                  aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id nisi interdum is mollis.
-                  Praesent the pharetra, justo ut scelerisque.
-                </p>
-              </article>
-            </div>
+            <article class="feedback__item">
+              <div class="feedback__item-user">
+                <img class="feedback__item-img" src="images/content/user.jpg" alt="avatar">
+                <a class="feedback__item-link" href="#">
+                  <span class="feedback__item-name">Taofiqul Hakim</span>
+                  <span class="feedback__item-profession">
+                    Product Designer
+                  </span>
+                </a>
+              </div>
+              <p class="feedback__item-text">
+                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
+                quam
+                aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id nisi interdum is mollis.
+                Praesent the pharetra, justo ut scelerisque.
+              </p>
+            </article>
+            <article class="feedback__item">
+              <div class="feedback__item-user">
+                <img class="feedback__item-img" src="images/content/user.jpg" alt="avatar">
+                <a class="feedback__item-link" href="#">
+                  <span class="feedback__item-name">Taofiqul Hakim</span>
+                  <span class="feedback__item-profession">
+                    Product Designer
+                  </span>
+                </a>
+              </div>
+              <p class="feedback__item-text">
+                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
+                quam
+                aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id nisi interdum is mollis.
+                Praesent the pharetra, justo ut scelerisque.
+              </p>
+            </article>
+            <article class="feedback__item">
+              <div class="feedback__item-user">
+                <img class="feedback__item-img" src="images/content/user.jpg" alt="avatar">
+                <a class="feedback__item-link" href="#">
+                  <span class="feedback__item-name">Taofiqul Hakim</span>
+                  <span class="feedback__item-profession">
+                    Product Designer
+                  </span>
+                </a>
+              </div>
+              <p class="feedback__item-text">
+                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
+                quam
+                aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id nisi interdum is mollis.
+                Praesent the pharetra, justo ut scelerisque.
+              </p>
+            </article>
+            <article class="feedback__item">
+              <div class="feedback__item-user">
+                <img class="feedback__item-img" src="images/content/user.jpg" alt="avatar">
+                <a class="feedback__item-link" href="#">
+                  <span class="feedback__item-name">Taofiqul Hakim</span>
+                  <span class="feedback__item-profession">
+                    Product Designer
+                  </span>
+                </a>
+              </div>
+              <p class="feedback__item-text">
+                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
+                quam
+                aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id nisi interdum is mollis.
+                Praesent the pharetra, justo ut scelerisque.
+              </p>
+            </article>
           </div>
-          <a class="feedback-btn newest__button-all" href="#">View All Reviews</a>
+          <a class="feedback__button button" href="#">View All Reviews</a>
         </div>
-      </div>
     </section>
 
     <section class="news">
@@ -1051,66 +1062,66 @@
             laborum dolo rumes fugats untras.
           </p>
           <div class="news__content">
-            <article class="newest__item">
-              <a class="newest__item-img" href="#" style="background-image: url(images/content/slider-1.jpg);"></a>
-              <div class="newest__item-content">
-                <div class="newest__item-top">
-                  <a class="newest__item-title" href="#">
-                    Web Design Trends in 2017
+            <article class="item-card news__item-card">
+              <a class="item-card__img" href="#">
+                <img class="item-card__img" src="images/content/slider.jpg" alt="item-card">
+              </a>
+              <div class="item-card__content">
+                <div class="item-card__top">
+                  <a class="item-card__title" href="#">
+                    E-commerce Shopping Cart
                   </a>
-                  <p class="newest__item-text">
+                  <p class="item-card__text">
                     Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
                     the mattis, leo quam aliquet congue.
                   </p>
                 </div>
-                <div class="newest__item-bottom item-bottom">
-                  <div class="newest__bottom-content item-bottom__content">
-                    <time class="news__date" datetime="2017-02-24">24 Feb 2017</time>
-                    <a class="news__comments" href="#">45</a>
-                    <a class="news__preview" href="#">345</a>
-                  </div>
+                <div class="item-card__bottom bottom">
+                  <time class="news__date" datetime="2017-02-24">24 Feb 2017</time>
+                  <button class="news__comments">45</button>
+                  <button class="news__preview">345</button>
                 </div>
               </div>
             </article>
-            <article class="newest__item">
-              <a class="newest__item-img" href="#" style="background-image: url(images/content/slider-2.jpg);"></a>
-              <div class="newest__item-content">
-                <div class="newest__item-top">
-                  <a class="newest__item-title" href="#">
-                    The best advices to start your
-                    own project
+            <article class="item-card news__item-card">
+              <a class="item-card__img" href="#">
+                <img class="item-card__img" src="images/content/slider.jpg" alt="item-card">
+              </a>
+              <div class="item-card__content">
+                <div class="item-card__top">
+                  <a class="item-card__title" href="#">
+                    E-commerce Shopping Cart
                   </a>
-                  <p class="newest__item-text">
-                    Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                  </p>
-                </div>
-                <div class="newest__item-bottom item-bottom">
-                  <div class="newest__bottom-content item-bottom__content">
-                    <time class="news__date" datetime="2017-02-24">24 Feb 2017</time>
-                    <a class="news__comments" href="#">45</a>
-                    <a class="news__preview" href="#">345</a>
-                  </div>
-                </div>
-              </div>
-            </article>
-            <article class="newest__item">
-              <a class="newest__item-img" href="#" style="background-image: url(images/content/slider-3.jpg);"></a>
-              <div class="newest__item-content">
-                <div class="newest__item-top">
-                  <a class="newest__item-title" href="#">
-                    Best Related Post Plugin
-                  </a>
-                  <p class="newest__item-text">
+                  <p class="item-card__text">
                     Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
                     the mattis, leo quam aliquet congue.
                   </p>
                 </div>
-                <div class="newest__item-bottom item-bottom">
-                  <div class="newest__bottom-content item-bottom__content">
-                    <time class="news__date" datetime="2017-02-24">24 Feb 2017</time>
-                    <a class="news__comments" href="#">45</a>
-                    <a class="news__preview" href="#">345</a>
-                  </div>
+                <div class="item-card__bottom bottom">
+                  <time class="news__date" datetime="2017-02-24">24 Feb 2017</time>
+                  <button class="news__comments">45</button>
+                  <button class="news__preview">345</button>
+                </div>
+              </div>
+            </article>
+            <article class="item-card news__item-card">
+              <a class="item-card__img" href="#">
+                <img class="item-card__img" src="images/content/slider.jpg" alt="item-card">
+              </a>
+              <div class="item-card__content">
+                <div class="item-card__top">
+                  <a class="item-card__title" href="#">
+                    E-commerce Shopping Cart
+                  </a>
+                  <p class="item-card__text">
+                    Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                    the mattis, leo quam aliquet congue.
+                  </p>
+                </div>
+                <div class="item-card__bottom bottom">
+                  <time class="news__date" datetime="2017-02-24">24 Feb 2017</time>
+                  <button class="news__comments">45</button>
+                  <button class="news__preview">345</button>
                 </div>
               </div>
             </article>
@@ -1145,7 +1156,7 @@
           <p class="join__text">
             Over 25,000 designers and developers trust the MartPlace.
           </p>
-          <a class="join__btn" href="#">
+          <a class="button join__button" href="#">
             Join Us Today
           </a>
         </div>
@@ -1159,7 +1170,7 @@
     <div class="footer__content">
       <div class="container">
         <div class="footer__inner">
-          <div class="footer__col">
+          <address class="footer__col">
             <div class="footer__logo">
               <img class="footer__logo-img" src="images/footer-logo.png" alt="logo">
             </div>
@@ -1173,11 +1184,11 @@
             <a class="footer__info footer__info-mail" href="mailto:support@aazztech.com">
               support@aazztech.com
             </a>
-            <address class="footer__info footer__info-address">
+            <a class="footer__info footer__info-address" href="#">
               PO Box 16122 Collins Street West
               Victoria 8007 Australia
-            </address>
-          </div>
+            </a>
+          </address>
           <div class="footer__col footer__col-menu">
             <div class="footer__col-title">
               Our Company
@@ -1266,19 +1277,44 @@
             <div class="footer__col-title">
               Newsletter
             </div>
-              <form class="footer__form">
-                <label class="footer__form-label">Subscribe to get the latest news, update and offer information. Don't worry, we won't send spam!
-                  <input class="footer__form-input" type="email" placeholder="Enter email">
-                </label>
-                <button class="footer__form-btn" type="submit">Submit</button>
-              </form>
+            <form class="footer__form form">
+              <label class="form__label">Subscribe to get the latest news, update and offer information. Don't
+                worry, we won't send spam!
+                <input class="form__input" type="email" placeholder="Enter email" name="email">
+              </label>
+              <button class="form__btn" type="submit">Submit</button>
+            </form>
             <ul class="footer__social-list social-list">
-              <li class="social-list__item"><a class="social-list__link link-facebook" href="#"></a></li>
-              <li class="social-list__item"><a class="social-list__link link-twitter" href="#"></a></li>
-              <li class="social-list__item"><a class="social-list__link link-google" href="#"></a></li>
-              <li class="social-list__item"><a class="social-list__link link-pinterest" href="#"></a></li>
-              <li class="social-list__item"><a class="social-list__link link-linkedin" href="#"></a></li>
-              <li class="social-list__item"><a class="social-list__link link-dribble" href="#"></a></li>
+              <li class="social-list__item">
+                <a class="social-list__link link-facebook" href="#">
+                  facebook
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link link-twitter" href="#">
+                  twitter
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link link-google" href="#">
+                  google
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link link-pinterest" href="#">
+                  pinterest
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link link-linkedin" href="#">
+                  linkedin
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link link-dribble" href="#">
+                  dribble
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -1287,13 +1323,13 @@
     <div class="footer__copy">
       <div class="container">
         <div class="footer__copy-text">
-          ©2017 <span class="footer__copy-text--span">MartPlace</span>. All rights reserved. Created by <span class="footer__copy-text--span">AazzTech</span>
+          ©2017 <span class="footer__copy-text--span">MartPlace</span>. All rights reserved. Created by <span
+            class="footer__copy-text--span">AazzTech</span>
         </div>
       </div>
     </div>
   </footer>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/libs.min.js"></script>
   <script src="js/main.js"></script>
 </body>

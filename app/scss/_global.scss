@@ -6,39 +6,27 @@ html{
 *::after{
   box-sizing: inherit;
 }
+
 a{
   text-decoration: none;
 }
+
 body{
   font-family: 'Quicksand', sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: $text;
 }
+
 .container{
   max-width: 1170px;
   margin: 0 auto;
   padding: 0 15px;
 }
+
 .container-fluid{
   max-width: 100%;
   margin: 0 auto;
-}
-.btn{
-  background-color: $blue;
-  color: #ffffff;
-  &:hover{
-    background-color: rgba(#0674ec, 0.9)
-  }
-}
-.title{
-  font-size: 30px;
-  line-height: 28px;
-  color: #000000;
-  background-color: #ffffff;
-  box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
-  padding: 40px 0 40px 30px;
-  border-radius: 4px;
 }
 
 
