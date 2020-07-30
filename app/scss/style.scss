@@ -18,6 +18,7 @@
   &__logo{
     padding-left: 8px;
     display: block;
+    outline-color: #dcdcdc;
   }
   &__bottom{
     background-color: #ffffff;
@@ -45,10 +46,8 @@
   &__btn{
     display: inline-block;
     margin: 8px 0;
-    padding: 5px;
-    max-width: 139px;
-    width: 100%;
-    border-radius: 20px;
+    padding: 7px 18px 7px 18px;
+    border-radius: 40px;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
     text-align: center;
     font-size: 14px;
@@ -56,17 +55,23 @@
     margin-right: 53px;
     background-color: $blue;
     color: #ffffff;
+    outline-color: #dcdcdc;
     &:hover{
       background-color: rgba(#0674ec, 0.9)
+    }
+    &:active{
+      box-shadow: 3px 3px 17px 3px #3f3f3f;
     }
   }
   &__icons{
     display: flex;
     margin-right: 10px;
+    margin-left: -5px;
   }
   &__icons-btn{
     margin-right: 34px;
     position: relative;
+    outline-color: #dcdcdc;
   }
   &__numbers{
     height: 22px;
@@ -105,6 +110,7 @@
 }
 .user-info{
   display: flex;
+  outline-color: #dcdcdc;
   &__avatar{
     display: inline-block;
     width: 50px;
@@ -119,6 +125,7 @@
     line-height: 16px;
     padding-left: 22px;
     padding-top: 8px;
+    min-width: 122px;
   }
   &__balance{
     display: block;
@@ -140,7 +147,8 @@
     font-size: 15px;
     font-weight: 500;
     text-transform: uppercase;
-    &:hover{
+    outline-color: #dcdcdc;
+    &--active, &:hover{
       color: $blue;
     }
   }
@@ -158,6 +166,7 @@
     border-radius: 40px;
     font-size: 15px;
     padding: 0 90px 0 24px;
+    outline-color: #dcdcdc;
     &::placeholder{
       color: #898f96;
       font-weight: 500;
@@ -193,6 +202,7 @@
   &__inner-title{
     font-size: 60px;
     line-height: 70px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   }
   &__inner-title--bold{
     display: inline-block;
@@ -209,6 +219,7 @@
     color: #ffffff;
     margin-bottom: 165px;
     display: inline-block;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     &:hover{
       background-color: #ffffff;
       color: $blue;
@@ -262,7 +273,7 @@
   &__input, 
   &__form-btn{ 
     min-height: 53px;
-    border-radius: 6px;
+    border-radius: 4px;
   }
   &__input,
   &__select{
@@ -275,6 +286,7 @@
   }
   &__select{
     padding-left: 20px;
+    padding-right: 40px;
     max-width: 194px;
     width: 100%;
     border-radius: 0px 6px 6px 0px;
@@ -306,19 +318,24 @@
 .button{
   padding: 18px 30px;
   border-radius: 50px;
+  &:active{
+    box-shadow: 3px 3px 17px 3px #3f3f3f;
+  }
 }
 // end search
 // start advantages
 
 .advantages{
   background-color: #ffffff;
-  padding: 185px 0 120px;
+  padding: 185px 0 110px;
   &__inner{
     display: flex;
     justify-content: space-between;
+    padding-left: 12px;
+    padding-right: 12px;
   }
   &__item{
-    max-width: 360px;
+    max-width: 330px;
     width: 100%;
     text-align: center;
     padding: 40px 15px;
@@ -342,6 +359,7 @@
   }
   &__item-text{
     line-height: 30px;
+    margin-top: 20px;
   }
 }
 
@@ -356,17 +374,16 @@
 
 .weekly{
   background-color: #eff1f5;
-  padding: 120px 0 95px 0;
+  padding: 120px 0 115px 0;
 }
 .slider-item{
-  overflow: hidden;
   &__box{
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
     background-color: #ffffff;
     border-radius: 4px;
-    box-shadow: 0px 2px 30px 0px rgba(147, 155, 168, 0.1);
+    box-shadow: 0px 2px 30px -3px rgba(147, 155, 168, 0.1);
     position: relative;
     overflow: hidden;
     &:hover .slider-item__hover{
@@ -386,7 +403,7 @@
   &__content{
     max-width: 585px;
     width: 100%;
-    padding: 50px 50px 22px 50px;
+    padding: 46px 50px 22px 50px;
   }
   &__top{
     margin-bottom: 40px;
@@ -398,20 +415,17 @@
   }
   &__text{
     line-height: 30px;
-    padding: 22px 0 40px 0;
+    padding: 25px 0 30px 0;
     margin: 0;
   }
   &__bottom{
-    padding-top: 22px;
+    padding-top: 24px;
     border-top: 1px solid #ececec;
     display: flex;
     justify-content: space-between;
   }
   &__info{
     padding: 15px 0 0;
-  }
-  .slider-item__btn + .slider-item__btn{
-    margin-left: 3px;
   }
 }
 
@@ -429,7 +443,7 @@
 .title{
   background-color: #ffffff;
   box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
-  padding: 44px 0 43px 31px;
+  padding: 30px 0 34px 31px;
   border-radius: 4px;
   &__text{
     font-size: 30px;
@@ -441,6 +455,7 @@
 .followers-slider__title{
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .slider-buttons{
   border-radius: 30px;
@@ -449,6 +464,7 @@
   position: relative;
 }
 .weekly__slider-buttons{
+  margin-top: 2px;
   margin-right: 30px;
   background-color: #7347c1;
 }
@@ -477,7 +493,7 @@
   top: 0;
   &::before{
     content: '\e876';
-    right: 26px;
+    right: 23px;
   }
 }
 .info{
@@ -502,16 +518,15 @@
   }
 }
 .category{
-  padding-left: 47px;
   color: $purple;
-  position: relative;
-  &::before{
-    content:'';
-    position: absolute;
-    background-image: url(../images/icons/wordpress.svg);
-    width: 15px;
-    height: 15px;
-    left: 20px;
+  padding-left: 19px;
+  &__logo{
+    width: 16px;
+    height: 16px;
+    object-fit: cover;
+  }
+  &__name{
+    padding-left: 9px;
   }
 }
 .btn{
@@ -520,8 +535,9 @@
   font-size: 15px;
   color: #868c96;
   line-height: 30px;
-  padding: 3px 20px 0;
+  padding: 3px 17px 0;
   border-radius: 20px;
+  margin-top: 5px;
   cursor: pointer;
   outline: transparent;
   &:hover{
@@ -533,17 +549,20 @@
     background-color: $blue;
     color: #ffffff;
   }
+  &:active{
+  box-shadow: 3px 3px 17px 3px #3f3f3f;
+  }
 }
 .price{
   display: inline-block;
   background-color: $blue;
   color: #ffffff;
-  line-height: 30px;
+  line-height: 32px;
   font-size: 15px;
   font-weight: 500;
-  padding: 0 24px 0 19px;
+  padding: 0 22px 0 22px;
   border-radius: 20px;
-  margin-right: 22px;
+  margin-right: 13px;
 }
 .likes,
 .purchase{
@@ -556,14 +575,14 @@
   position: absolute;
   left: 0;
   font-family: 'Linearicons-Free';
-  font-size: 17px;
+  font-size: 14px;
 }
 .likes{
   display: inline-block;
   font-size: 15px;
   color: #000000;
-  padding-left: 28px;
-  margin-right: 18px;
+  padding-left: 27px;
+  margin-right: 9px;
   position: relative;
   &::before{
     content:'\e813';
@@ -571,7 +590,7 @@
   }
 }
 .purchase{
-  padding-left: 24px;
+  padding-left: 22px;
   font-size: 15px;
   color: $blue;
   position: relative;
@@ -581,7 +600,7 @@
   }
 }
 .rate-star.jq-ry-container{
-  padding: 10px 5px;
+  padding: 10px 0px;
 }
 .jq-ry-normal-group svg{
   fill: #ffffff;
@@ -597,26 +616,34 @@
 
 .newest{
   background-color: #f6f7fb;
-  padding: 120px 0;
+  padding: 120px 0 130px 0;
   &__title{
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    padding: 40px 0 40px 31px;
     display: flex;
     justify-content: space-between;
   }
   &__category-btn{
     background-color: #ffffff;
     box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
-    padding: 30px 0 30px 30px;
+    padding: 25px 0 30px 30px;
     border-radius: 4px;
-    margin-bottom: 30px;
+    margin-bottom: 52px;
   }
   &__inner{
     display: flex;
-    justify-content: space-between;
+    margin: -30px;
     flex-wrap: wrap;
   }
   &__item-card{
     margin-top: 30px;
+    margin-left: 28px;
+  }
+  &__btn{
+    padding: 3px 20px 0;
+    & + &{
+      margin-right: 4px;
+    }
   }
 }
 
@@ -627,6 +654,8 @@
   width: 100%;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
   &__img{
     width: 100%;
     min-height: 232px;
@@ -635,7 +664,7 @@
   }
   &__content{
     background-color: #ffffff;
-    padding: 24px 0 20px;
+    padding: 28px 0 15px;
   }
   &__title{
     font-size: 20px;
@@ -675,11 +704,23 @@
     min-height: 232px;
     max-width: 362px;
   }
+  .info{
+    padding-left: 30px;
+  }
+  .user__name{
+    padding-left: 5px;
+  }
+  .category{
+    padding-left: 15px;
+  }
+  .category__name{
+    padding-left: 5px;
+  }
 }
 .newest__button,
 .feedback__button{
   display: block;
-  margin: 58px auto 0;
+  margin: 80px auto 0;
   background-color: $blue;
   color: #ffffff;
   font-size: 16px;
@@ -782,7 +823,7 @@
 
 .followers-slider{
   background-color: #eff1f5;
-  padding: 120px 0;
+  padding: 115px 0 115px 0;
   &__slider-buttons{
     margin-right: 30px;
     background-color: $blue;
@@ -806,7 +847,7 @@
 
 .statistics{
   background-color: #212225;
-  padding: 90px 0;
+  padding: 94px 0 88px 0;
   &__inner{
     display: flex;
     justify-content: space-between;
@@ -865,7 +906,7 @@
 .benefits__inner,
 .feedback__inner,
 .news__inner{
-  padding: 100px 0 115px 0;
+  padding: 100px 0 120px 0;
   text-align: center;
 }
 .benefits__title,
@@ -900,7 +941,7 @@
   &__item{
     max-width: 360px;
     min-height: 375px;
-    padding: 25px 30px 0;
+    padding: 20px 30px 0;
     box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
     margin-top: 30px;
     position: relative;
@@ -917,16 +958,19 @@
     }
   }
   &__item-title{
-    font-size: 24px;
-    color: #000000;
-    padding-top: 130px;
+    padding-top: 135px;
     position: relative;
     &.lnr::before{
       position: absolute;
-      top: 30px;
+      top: 35px;
       left: 125px;
       font-size: 55px;
     }
+  }
+  &__item-span{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 24px;
+    color: #000000;
   }
   &__item-text{
     margin-top: 25px;
@@ -963,7 +1007,7 @@
     text-align: center;
   }
   &__item-content{
-    max-width: 560px;
+    max-width: 595px;
     margin: 0 auto;
     margin-bottom: 20px;
   }
@@ -971,7 +1015,6 @@
     padding: 95px 0;
     color: #ffffff;
     width: 50%;
-    
   }
   &__item-sell{
     background-color: $blue;
@@ -987,7 +1030,7 @@
   }
   &__item-title{
     font-size: 36px;
-    padding-top: 146px;
+    padding-top: 152px;
     position: relative;
     &::before{
       content: '';
@@ -996,14 +1039,14 @@
       top: 60px;
       left: 50%;
       transform: translate(-50%, -50%);
-      max-width: 130px;
+      max-width: 120px;
       width: 100%;
       min-height: 110px;
     }
   }
   &__item-text{
     line-height: 30px;
-    margin-bottom: 70px;
+    margin-bottom: 65px;
   }
   &__button{
     background-color: #ffffff;
@@ -1047,8 +1090,12 @@
     padding-right: 20px;
     padding-left: 10px;
   }
+  &__inner{
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
   &__slider{
-    margin-top: 27px;
+    margin-top: 20px;
   }
   &__item{
     max-width: 550px;
@@ -1096,10 +1143,11 @@
   &__item-text{
     text-align: left;
     line-height: 30px;
+    padding-top: 10px;
   }
   &__button{
     display: inline-block;
-    margin-top: 30px;
+    margin: 28px auto 0;
   }
 }
 
@@ -1132,7 +1180,7 @@
 .news{
   background-color: #eff1f5;
   &__inner{
-    padding-top: 110px;
+    padding-top: 100px;
     padding-bottom: 120px;
   }
   &__text{
@@ -1142,6 +1190,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 40px;
   }
   &__date,
   &__comments,
@@ -1160,7 +1209,7 @@
     }
   }
   &__date{
-    padding-right: 47px;
+    padding-right: 50px;
     border-right: 1px solid #ececec;
     &::before{
     content: "\e864";
@@ -1193,7 +1242,8 @@
     font-size: 22px;
   }
   .item-card__text{
-    min-height: 85px;
+    min-height: 80px;
+    padding-top: 5px;
   }
 }
 
@@ -1207,35 +1257,23 @@
   }
   &__item{
     width: 50%;
-    padding: 210px 0 60px 0;
+    padding: 10px 0 60px 0;
     position: relative;
   }
   &__title{
     font-size: 24px;
     color: #000000;
-    &::before{
-      content: '';
-      position: absolute;
-      background-repeat: no-repeat;
-      top: 60px;
-      width: 160px;
-      height: 120px;
-    }
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 200px;
+    margin-right: 20px;
   }
   &__title--money{
-    &::before{
-      background-image: url(../images/guarantee.png);
-      right: 190px;
-    }
     .guarantee__title-span{
       color: $blue;
     }
   }
   &__title--support{
-    &::before{
-      background-image: url(../images/support.png);
-      left: 215px;
-    }
     .guarantee__title-span{
      color: $purple;
     }
@@ -1293,7 +1331,7 @@
   }
   &__col{
     font-style: normal;
-    max-width: 280px;
+    max-width: 290px;
   }
   &__col-title{
     font-size: 18px;
@@ -1331,12 +1369,17 @@
   &__info-mail::before{
     content: "\e818";
   }
-  &__info-address::before{
+  &__info-address{
+    padding-top: 10px;
+    &::before{
       content: "\e833";
+    }
   }
+  
   &__col-menu{
-    max-width: 170px;
+    max-width: 185px;
     width: 100%;
+    margin-left: 30px;
   }
   &__col-list{
     list-style-type: none;
@@ -1358,7 +1401,7 @@
     .form__input{
       width: 100%;
       height: 50px;
-      margin-top: 30px;
+      margin-top: 35px;
       padding: 18px 130px 18px 28px;
       border: none;
       &::placeholder{
